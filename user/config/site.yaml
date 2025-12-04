@@ -1,0 +1,19 @@
+title: Vineyard
+default_lang: en
+author:
+  name: Alex
+  email: alex.sterian.cristea@gmail.com
+taxonomies:
+  - category
+  - tag
+metadata:
+  description: 'Vineyard in Landsberg am Lech'
+summary:
+  enabled: true
+  format: short
+  size: 300
+  delimiter: '==='
+redirects: null
+routes: null
+blog:
+  route: /blog
