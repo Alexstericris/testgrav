@@ -1,0 +1,64 @@
+title: Slider
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        content:
+          type: tab
+          title: Content
+          fields:
+            header.slides:
+              name: slides
+              type: list
+              label: Slides
+              fields:
+                .text:
+                  type: text
+                  label: Heading
+                .image:
+                  type: filepicker
+                  label: Image
+                  folder: '@self'
+                  preview_images: true
+                  accept:
+                    - .png
+                    - .jpg
+                    - .jpeg
+                .alt:
+                  type: text
+                  label: Alt Text
+
+#
+#title: Simple Module
+#'@extends': modular/default
+#
+#form:
+#  fields:
+#    tabs:
+#      type: tabs
+#      active: 1
+#
+#      fields:
+#        content:
+#          type: tab
+#          title: Content
+#
+#          fields:
+#            header.title:
+#              type: text
+#              label: Title
+#              help: The title for this module
+#
+#            header.text:
+#              type: textarea
+#              label: Intro Text
+#              help: A short introduction text for this module
+#
+#            content:
+#              type: editor
+#              label: Content
+#              help: Main content area

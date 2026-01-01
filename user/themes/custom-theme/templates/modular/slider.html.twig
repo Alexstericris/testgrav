@@ -1,0 +1,17 @@
+<div class="max-device-width">
+    <div class="slider">
+        {% for slide in page.header.slides %}
+            <div class="slide">
+                {% if slide.text %}
+                    <div class="slide-text">
+                        <h1>{{ slide.text }}</h1>
+                    </div>
+                {% endif %}
+                <figure>
+                    <img src="{{ slide.image }}" alt="{{ slide.alt|default('Slide') }}" />
+                </figure>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+

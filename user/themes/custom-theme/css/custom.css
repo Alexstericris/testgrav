@@ -129,6 +129,28 @@ a:hover {
   /*border-radius: 1rem;*/
 }
 
+
+.slider {
+  overflow: hidden;
+  position: relative;
+  border-radius: 1rem;
+}
+
+.slider .slide {
+  position: relative;
+  width: 300%;
+  margin: 0;
+  left: 0;
+  animation: 15s slider infinite;
+}
+
+.slider .slide figure img {
+  width: 33.3333%;
+  float: left;
+  height: 70vh; /* Adjust height as needed */
+  object-fit: cover;
+}
+
 #body-wrapper .container{
   padding: 0;
 }
