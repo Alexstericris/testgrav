@@ -6,7 +6,7 @@ content:
     limit: 5
     order:
         by: folder
-        dir: desc
+        dir: asc
 menu: Church
 slug: vineyard-church
 onpage_menu: '0'

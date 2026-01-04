@@ -97,6 +97,17 @@ body{
   background: var(--color-secondary-200);
 }
 
+.header-fixed #header{
+  position: sticky;
+  /*z-index: 11;*/
+}
+
+.capsule {
+  background: var(--color-neutral-50);
+  border-radius: 2rem;
+  padding: 1rem;
+}
+
 #header{
   background-color: var(--color-neutral-50);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
@@ -111,9 +122,10 @@ body{
 }
 
 a {
-  color: var(--color-secondary-accent2)
+  color: var(--color-secondary-accent2);
+  cursor: pointer;
 }
-a:hover {
+a:hover, a:focus, a:active, a:visited {
   color: var(--color-secondary-accent)
 }
 
@@ -130,50 +142,11 @@ a:hover {
 }
 
 
-.slider {
-  overflow: hidden;
-  position: relative;
-  border-radius: 1rem;
-}
-
-.slider .slide {
-  position: relative;
-  width: 300%;
-  margin: 0;
-  left: 0;
-  animation: 15s slider infinite;
-}
-
-.slider .slide figure img {
-  width: 33.3333%;
-  float: left;
-  height: 70vh; /* Adjust height as needed */
-  object-fit: cover;
-}
 
 #body-wrapper .container{
   padding: 0;
 }
-@keyframes slider {
-  0% {
-    left: 0;
-  }
-  30% {
-    left: 0;
-  }
-  33% {
-    left: -100%;
-  }
-  63% {
-    left: -100%;
-  }
-  66% {
-    left: -200%;
-  }
-  96% {
-    left: -200%;
-  }
-  100% {
-    left: 0;
-  }
+
+#footer {
+  text-align: left;
 }

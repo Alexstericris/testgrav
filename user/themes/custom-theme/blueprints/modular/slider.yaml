@@ -11,14 +11,22 @@ form:
           type: tab
           title: Content
           fields:
+            content:
+              unset@: true
             header.slides:
               name: slides
               type: list
               label: Slides
               fields:
                 .text:
-                  type: text
-                  label: Heading
+                  type: editor
+                  label: Slide Text (Markdown)
+                  markdown: true
+                  codemirror:
+                    mode: 'gfm'        # GitHub-flavored markdown
+                    theme: 'paper'
+                  validate:
+                    type: textarea
                 .image:
                   type: filepicker
                   label: Image
@@ -32,33 +40,3 @@ form:
                   type: text
                   label: Alt Text
 
-#
-#title: Simple Module
-#'@extends': modular/default
-#
-#form:
-#  fields:
-#    tabs:
-#      type: tabs
-#      active: 1
-#
-#      fields:
-#        content:
-#          type: tab
-#          title: Content
-#
-#          fields:
-#            header.title:
-#              type: text
-#              label: Title
-#              help: The title for this module
-#
-#            header.text:
-#              type: textarea
-#              label: Intro Text
-#              help: A short introduction text for this module
-#
-#            content:
-#              type: editor
-#              label: Content
-#              help: Main content area
