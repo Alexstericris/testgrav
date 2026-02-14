@@ -130,12 +130,33 @@ body{
   color: var(--color-primary-accent) !important;
 }
 
+.mobile-menu .button_container span{
+  background: var(--color-primary-accent);
+}
+
+.mobile-menu .button_container.active .top{
+  background: var(--color-primary-accent);
+}
+.mobile-menu .button_container.active .bottom{
+  background: var(--color-primary-accent);
+}
+
+.overlay {
+  background: #fff;
+  opacity: .97;
+}
+
+.treemenu li a.active, .treemenu li a:focus, .treemenu li a:hover{
+  color: var(--color-secondary-accent2) !important;
+}
+
 a {
   color: var(--color-secondary-accent2);
   cursor: pointer;
 }
 a:hover, a:focus, a:active, a:visited {
-  color: var(--color-secondary-accent)
+  color: var(--color-secondary-accent);
+  text-decoration: underline;
 }
 
 .max-device-width{
@@ -158,4 +179,16 @@ a:hover, a:focus, a:active, a:visited {
 
 #footer {
   text-align: left;
+}
+
+.mb-25{
+  margin-bottom: 25px;
+}
+
+.header-fixed .mobile-menu{
+  position: inherit;
+}
+
+.mobile-menu .button_container.active{
+  position: absolute;
 }

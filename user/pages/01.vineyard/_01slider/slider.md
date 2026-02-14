@@ -8,7 +8,7 @@ content:
 image_align: left
 slides:
     -
-        text: "# Welcome to Vineyard\nSunday service every week at **10:00**\n\n[Livestream](https://youtube.com)"
+        text: "# Welcome to Vineyard\nSunday service every week at **10:00**\n\nOr watch our [Livestream](https://youtube.com)"
         image: image-1.jpg
         alt: 'Vineyard 1'
     -
