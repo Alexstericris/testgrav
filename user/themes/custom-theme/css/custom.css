@@ -192,3 +192,75 @@ a:hover, a:focus, a:active, a:visited {
 .mobile-menu .button_container.active{
   position: absolute;
 }
+
+
+/* Flexbox utilities */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
+}
+
+/* Display utilities */
+.block {
+  display: block;
+}
+
+/* Width utilities */
+.w-full {
+  width: 100%;
+}
+
+/* Height utilities */
+.h-auto {
+  height: auto;
+}
+
+.h-96 {
+  height: 24rem; /* 384px */
+}
+
+/* Gap utilities */
+.gap-8 {
+  gap: 2rem; /* 32px */
+}
+
+/* Margin utilities */
+.mt-4 {
+  margin-top: 1rem; /* 16px */
+}
+
+.mb-4 {
+  margin-bottom: 1rem; /* 16px */
+}
+
+.mt-12 {
+  margin-top: 3rem; /* 48px */
+}
+
+.mb-12 {
+  margin-bottom: 3rem; /* 48px */
+}
+
+/* Text utilities */
+.text-center {
+  text-align: center;
+}
+
+/* Border utilities */
+.border-0 {
+  border-width: 0;
+}
+
+/* Responsive utilities - Desktop (768px and up) */
+@media (min-width: 768px) {
+  .md\:flex-row {
+    flex-direction: row;
+  }
+}

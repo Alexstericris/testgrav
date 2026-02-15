@@ -47,3 +47,5 @@ tests/error.log
 system/templates/testing/*
 /user/config/versions.yaml
 /tmp/
+/user/config/plugins/
+/user/plugins/tinymce-editor/
