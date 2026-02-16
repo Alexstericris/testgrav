@@ -10,11 +10,8 @@ content:
 menu: Church
 slug: vineyard-church
 onpage_menu: '0'
+body_classes: header-transparent
 process:
     markdown: true
     twig: true
 ---
-
-
-
-

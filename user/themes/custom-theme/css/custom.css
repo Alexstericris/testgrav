@@ -58,6 +58,27 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #ffffff;
   border-bottom: 1px solid var(--color-neutral-200);
   padding: 1rem 0;
+  transition: all 0.3s ease;
+}
+
+/* Header Transparent State */
+.header-transparent #header:not(.scrolled) {
+  background-color: rgba(0, 0, 0, 0.4); /* Dark semi-transparent */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: none;
+  box-shadow: none;
+}
+
+.header-transparent #header:not(.scrolled) .desktop-menu a {
+  color: #ffffff; /* White text on dark/transparent header */
+}
+
+/* Scrolled state (if implemented by JS or theme) */
+.header-transparent #header.scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(5px);
+  border-bottom: 1px solid var(--color-neutral-200);
 }
 
 #header .desktop-menu a {
@@ -73,6 +94,12 @@ h1, h2, h3, h4, h5, h6 {
 #header .dropmenu ul li a.active {
   color: var(--color-primary-500) !important;
   border-bottom: 2px solid var(--color-primary-500); /* Underline style */
+}
+
+.header-transparent #header:not(.scrolled) .dropmenu ul li a:hover,
+.header-transparent #header:not(.scrolled) .dropmenu ul li a.active {
+   color: #ffffff !important;
+   border-bottom-color: #ffffff;
 }
 
 /* Main Content Area */
@@ -150,4 +177,40 @@ blockquote {
 /* Mobile Menu Button Override */
 .mobile-menu .button_container span {
   background: var(--color-neutral-900);
+}
+
+.header-transparent #header:not(.scrolled) .mobile-menu .button_container span {
+  background: #ffffff;
+}
+
+/* Hero Styles */
+.hero-fullscreen {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-light, .text-light h1, .text-light h2, .text-light p {
+    color: #ffffff !important;
+}
+
+.overlay-dark-gradient:before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
+    z-index: 1;
+}
+
+.modular-hero {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.modular-hero .container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
 }
