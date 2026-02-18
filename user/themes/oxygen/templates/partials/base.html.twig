@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% include 'partials/metadata.html.twig' %}
     <link rel="icon" type="image/png" href="{{ url('theme://images/logo.png') }}" />
-    
+
     {% block stylesheets %}
         {% do assets.addCss('theme://css/custom.css', 100) %}
         {% do assets.addCss('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css') %}
     {% endblock %}
-    {{ assets.css() }}
+    {{ assets.css()|raw }}
 </head>
 <body class="{{ page.header.body_classes }}">
     <header class="site-header">
@@ -44,6 +44,6 @@
     {% block javascripts %}
         {% do assets.addJs('theme://js/main.js', 100) %}
     {% endblock %}
-    {{ assets.js() }}
+    {{ assets.js()|raw }}
 </body>
 </html>
