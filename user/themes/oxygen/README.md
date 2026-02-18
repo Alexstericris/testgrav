@@ -1,153 +1,261 @@
-# Quark Theme
+# Oxygen Theme
 
-![](assets/quark-screenshots.jpg)
+Oxygen by [kittyfishfrommars](https://github.com/kittyfishfrommars) is a continuation of [hughbris](https://github.com/hughbris/grav-theme-solarize) work for [Grav CMS](http://github.com/getgrav/grav).
 
-**Quark** is the new default theme for [Grav CMS](http://github.com/getgrav/grav).  This theme is built with the [Spectre.css](https://picturepan2.github.io/spectre/) framework and provides a powerful base for developing your own themes. Quark uses functionality that is only available in Grav 1.4+, as such you cannot run Quark on earlier versions of Grav.
+[<img src="screenshot.jpg" width="360">](screenshot.jpg)
+---
+Demo: [kittyfishfrommars.github.io](https://kittyfishfrommars.github.io/grav/grav-theme-oxygen)
 
-## Features
+All-in-one package: [grav-skeleton-oxygen](https://github.com/kittyfishfrommars/grav-skeleton-oxygen/releases/)
 
-* Lightweight and minimal for optimal performance
-* Spectre CSS Framework
-* Fully responsive with full-page mobile navigation
-* SCSS based CSS source files for easy customization
-* Built-in support for on-page navigation
-* Multiple page template types
-* Fontawesome icon support
 
-### Supported Page Templates
+## Table of Contents
 
-* Default view template `default.md`
-* Error view template `error.md`
-* Blog view template `blog.md`
-* Blog item view template `item.md`
-* Modular view templates: `modular.md`
-  * Features Modular view template `features.md`
-  * Hero Modular view template `hero.md`
-  * Text Modular view template `text.md`
-  * Note: Gallery Modular view template `gallery.md` only works in concert with premium plugin [Lightbox Gallery](https://getgrav.org/premium/lightbox-gallery/docs)
+- [Summary](#summary)
+- [Installation](#installation)
+  - [GPM Installation (Preferred)](#gpm-installation-preferred)
+  - [Manual Installation](#manual-installation)
+  - [Setup](#setup)
+- [Updating](#updating)
+  - [GPM Update (Preferred)](#gpm-update-preferred)
+  - [Manual Update](#manual-update)
+- [Supported Templates](#supported-templates)
+- [Configuration](#configuration)
+  - [Theme Options](#theme-options)
+  - [Page Options](#page-options)
+  - [Environments](#environments)
+- [Build Tools](#build-tools)
+  - [Gulp](#gulp)
+- [Troubleshooting](#troubleshooting)
+  - [500 Internal Server Error](#500-internal-server-error)
+  - [Incorrect content rendering](#incorrect-content-rendering)
+- [Showcases in the wild](#showcases-in-the-wild)
+- [Credits](#credits)
 
-# Installation
 
-Installing the Quark theme can be done in one of two ways. Our GPM (Grav Package Manager) installation method enables you to quickly and easily install the theme with a simple terminal command, while the manual method enables you to do so via a zip file. 
+## Summary
 
-The theme by itself is useful, but you may have an easier time getting up and running by installing a skeleton. The Quark theme can be found in both the [One-page](https://github.com/getgrav/grav-skeleton-onepage-site) and [Blog Site](https://github.com/getgrav/grav-skeleton-blog-site) which are self-contained repositories for a complete sites which include: sample content, configuration, theme, and plugins.
+> Please see [CHANGELOG.md](CHANGELOG.md) for a detailed list of features included in this release.
 
-## GPM Installation (Preferred)
+* Oxygen is screen-reader friendly and meets **Accessibility** standards
+* Asset delivery has been optimized for **Performance**
+* Grav's admin plugin is supported via blueprints for ease of **Maintenance**
+* Preconfigured to set no cookies, no third-party connections for **GDPR-compliance**
+
+This theme includes a legally required [Contact page](_demo/pages/099.contact/default.md), with mandatory data pre-filled, to help with [GDPR](https://en.wikipedia.org/wiki/General_Data_Protection_Regulation) and [Press Regulations](https://secureprivacy.ai/blog/what-is-an-impressum). Please make sure to update your personal data and privacy statement to your specific use case. National laws apply.
+
+There's an additional [Elements page](_demo/pages/098.elements/default.md) included to allow you to identify gaps in the theme's styling. There are a few.
+
+
+## Installation
+
+### GPM Installation (Preferred)
 
 The simplest way to install this theme is via the [Grav Package Manager (GPM)](http://learn.getgrav.org/advanced/grav-gpm) through your system's Terminal (also called the command line).  From the root of your Grav install type:
 
-    bin/gpm install quark
+    bin/gpm install oxygen
 
-This will install the Quark theme into your `/user/themes` directory within Grav. Its files can be found under `/your/site/grav/user/themes/quark`.
+This will install the theme into your `/user/themes` directory within Grav. Its files can be found under `user/themes/oxygen`.
 
-## Manual Installation
+> This method will copy the sample pages provided in the `_demo/pages` folder to your `user/pages` folder so that the theme will work out of the box with placeholder content.
 
-To install this theme, just download the zip version of this repository and unzip it under `/your/site/grav/user/themes`. Then, rename the folder to `quark`. You can find these files either on [GitHub](https://github.com/getgrav/grav-theme-quark) or via [GetGrav.org](http://getgrav.org/downloads/themes).
+
+### Manual Installation
+
+> Please note that the demo content and configuration is not copied when your plugin or theme is installed via the Admin plugin. Please refer the provided files from the `_demo` folder.
+
+To install this theme, download the zip version of this repository and unzip it under `user/themes`. Then, rename the folder to `oxygen`. You can find these files either on [GitHub](https://github.com/kittyfishfrommars?tab=repositories) or via [GetGrav.org](http://getgrav.org/downloads/themes).
 
 You should now have all the theme files under
 
-    /your/site/grav/user/themes/quark
+    user/themes/oxygen
 
-## Default Options
+> It's easiest to adapt the default configuration and content provided with the original theme: move the contents of `_demo` into your grav installations's `user/pages` directory to ensure that the theme templates work out of the box.
 
-Quark comes with a few default options that can be set site-wide.  These options are:
 
-```yaml
-enabled: true                 # Enable the theme
-production-mode: true         # In production mode, only minified CSS is used. When disabled, nested CSS with sourcemaps are enabled
-grid-size: grid-lg            # The max-width of the theme, options include: `grid-xl`, `grid-lg`, and `grid-md`
-header-fixed: true            # Cause the header to be fixed at the top of the browser
-header-animated: true         # Allows the fixed header to resize to a smaller header when scrolled
-header-dark: false            # Inverts the text/logo to work better on dark backgrounds
-header-transparent: false     # Allows the fixed header to be transparent over the page
-sticky-footer: true           # Causes the footer to be sticky at the bottom of the page
-blog-page: '/blog'            # The route to the blog listing page, useful for a blog style layout with sidebar
-custom_logo:                  # A custom logo rather than the default (see below)  
-custom_logo_mobile:           # A custom logo to use for mobile navigation
-```
+### Setup
 
-To make modifications, you can copy the `user/themes/quark/quark.yaml` file to `user/config/themes/` folder and modify, or you can use the admin plugin.
+If you want to set Oxygen as the default theme, you can do so by following these steps:
 
-> NOTE: Do not modify the `user/themes/quark/quark.yaml` file directly or your changes will be lost with any updates
+* Navigate to `grav/user/config`.
+* Open [system.yaml](https://github.com/kittyfishfrommars/grav-theme-oxygen/blob/main/_demo/config/system.yaml).
+* Change the `theme:` setting to `theme: oxygen` to enable this theme.
+* Under `markdown:` set `extra: true` to enable Markdown Extra.
+* Under `markdown:` set `auto_line_breaks: true` to enable automatic line breaks.
+* Save your changes.
+* Open [site.yaml](https://github.com/kittyfishfrommars/grav-theme-oxygen/blob/main/_demo/config/system.yaml).
+* Add this line at the bottom: `taxonomies: [tag]` to enable Taxonomies.
+* Save your changes.
+* Clear the Grav cache. The simplest way to do this is by going to the root Grav directory in Terminal and typing `bin/grav clear-cache`.
 
-## Custom Logos
+Once this is done, you should be able to see the new theme on the frontend. Keep in mind any customizations made to the previous theme will not be reflected as all of the theme and templating information is now being pulled from the `oxygen` folder.
 
-To add a custom logo, you should put the log into the `user/themes/quark/images/logo` folder.  Standard image formats are support (`.png`,`.jpg`, `.gif`, `.svg`, etc.).  Then reference the logo via the YAML like so:
 
-```yaml
-custom_logo:
-    - name: 'my-logo.png'
-custom_logo_mobile:
-    - name: 'my-mobile-logo.png'    
-```
+## Updating
 
-Alternatively, you can you use the drag-n-drop "Custom Logo" field in the Quark theme options.
+As development for the Oxygen theme continues, new versions may become available that add additional features and functionality, improve compatibility with newer Grav releases, and generally provide a better user experience. Updating Oxygen is easy, and can be done through Grav's GPM system, as well as manually.
 
-## Page Overrides
 
-Quark has the ability to allow pages to override some of the default options by letting the user set `body_classes` for any page.  The theme will merge the combination of the defaults with any `body_classes` set. For example:
+### GPM Update (Preferred)
 
-```yaml
-body_classes: "header-dark header-transparent"
-```
+The simplest way to update this theme is via the [Grav Package Manager (GPM)](http://learn.getgrav.org/advanced/grav-gpm). You can do this with this by navigating to the root directory of your Grav install using your system's Terminal (also called command line) and typing the following:
 
-On a particular page will ensure that page has those options enabled (assuming they are false by default).
+    bin/gpm update oxygen
 
-## Hero Options
+This command will check your Grav install to see if your theme is due for an update. If a newer release is found, you will be asked whether or not you wish to update. To continue, type `y` and hit enter. The theme will automatically update and clear Grav's cache.
 
-The hero template allows some options to be set in the page frontmatter. This is used by the modular `hero` as well as the blog and item templates to provide a more dynamic header.
 
-```yaml
-hero_classes: text-light title-h1h2 parallax overlay-dark-gradient hero-large
-hero_image: road.jpg
-hero_align: center
-```
+### Manual Update
 
-The `hero_classes` option allows a variety of hero classes to be set dynamically these include:
+Manually updating this theme is pretty simple. Here is what you will need to do to get this done:
 
-* `text-light` | `text-dark` - Controls if the text should be light or dark depending on the content
-* `title-h1h2` - Enforced a close matched h1/h2 title pairing
-* `parallax` - Enables a CSS-powered parallax effect
-* `overlay-dark-gradient` - Displays a transparent gradient which further darkens the underlying image
-* `overlay-light-gradient` - Displays a transparent gradient which further lightens the underlying image
-* `overlay-dark` - Displays a solid transparent overlay which further darkens the underlying image
-* `overlay-light` - Displays a solid transparent overlay which further darkens the underlying image
-* `hero-fullscreen` | `hero-large` | `hero-medium` | `hero-small` | `hero-tiny` - Size of the hero block
+* Delete the `user/themes/oxygen` directory.
+* Download the new version of the oxygen theme from either [GitHub](https://github.com/kittyfishfrommars) or [GetGrav.org](http://getgrav.org/downloads/themes#extras).
+* Unzip the zip file in `user/themes` and rename the resulting folder to `oxygen`.
+* Clear the Grav cache. The simplest way to do this is by going to the root Grav directory in terminal and typing `bin/grav clear-cache`.
 
-The `hero_image` should point to an image file in the current page folder.
+> Note: Please backup any changes you have made to any of the files. Files listed under this directory will also be removed and replaced by the new set. Any files located elsewhere (for example a YAML settings file placed in `user/config/themes`) will remain intact.
 
-## Features Modular Options
 
-The features modular template provides the ability to set a class on the features, as well as an array of feature items.  For example:
+## Supported Templates
 
-```yaml
-class: offset-box
-features:
-    - header: Crazy Fast
-      text: "Performance is not just an afterthought, we baked it in from the start!"
-      icon: fighter-jet
-    - header: Easy to build
-      text: "Simple text files means Grav is trivial to install, and easy to maintain"
-      icon: database
-    - header: Awesome Technology
-      text: "Grav employs best-in-class technologies such as Twig, Markdown &amp; Yaml"
-      icon: cubes
-    - header: Super Flexible
-      text: "From the ground up, with many plugin hooks, Grav is extremely extensible"
-      icon: object-ungroup
-    - header: Abundant Plugins
-      text: "A vibrant developer community means over 200 themes available to download"
-      icon: puzzle-piece
-    - header: Free / Open Source
-      text: "Grav is an open source project, so you can spend your money on other stuff"
-      icon: money 
-```
+* [Sample home template](templates/home.html.twig)
+* [Default content template](templates/default.html.twig)
+* [Sidebar template](templates/sidebar.html.twig)
+* [Link module](templates/modular/links.html.twig)
+* [Footer template](templates/partials/footer.html.twig)
+* [Error template](templates/error.html.twig)
+* [Sitemap template](templates/sitemap.html.twig)
 
-## Text Modular Options
 
-The text box provides a single option to control if any image found in the page folder should be left or right aligned:
+## Configuration
 
-```yaml
-image_align: right
-```
+### Theme Options
 
+#### Enable site-wide indexing
+
+By default Oxygen additionally instructs [search engines](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag) to not index any content, so you can setup your new site in your own time. Once you are ready to go live you have two ways to remove the `noindex` meta tag:
+
+**Method 1: Admin Panel**
+
+Enable indexing through the [Grav Admin Panel](https://github.com/getgrav/grav-plugin-admin), which comes pre-installed with [Oxygen's Skeleton](https://github.com/kittyfishfrommars/grav-skeleton-oxygen) package.
+
+1. Login by pointing your browser to `http://mysite.com/admin`
+2. Navigate to `Themes` and select the Oxygen Theme
+3. Scroll down to `Theme Options` and enable the `Search Engine Index` toggle
+
+**Method 2: Manual Edit**
+
+Copy [user/env/mysite.com/config/themes/oxygen.yaml](https://github.com/kittyfishfrommars/grav-theme-oxygen/blob/main/_demo/config/env/mysite.com/config/themes/oxygen.yaml). Then rename the folder `mysite.com` to your production url without `www`. 
+
+Enable indexing by setting this key/value pair:
+
+`
+index: true
+`
+
+### Page Options
+
+#### Prevent a specific page from being indexed
+
+Per-page indexing will only take effect once site-wide indexing is enabled via [#theme-options].
+
+By default new pages may be indexed by [search engines](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag). However, you might want to exclude certain content from being indexed, such as error pages or personal data.
+
+**Method 1: Admin Panel**
+
+1. Login to the the [Grav Admin Panel](https://github.com/getgrav/grav-plugin-admin) by pointing your browser to `http://mysite.com/admin`
+2. Navigate your desired `Page`
+3. Scroll down to the`Page Options` fieldset, open it, and set the `Search Engine Index` toggle to `Disabled`
+
+**Method 2: Manual Edit**
+
+Open any [Markdown Page](https://raw.githubusercontent.com/kittyfishfrommars/grav-theme-oxygen/refs/heads/main/_demo/pages/error/error.md) in your preferred editor.
+
+Disable indexing of this page by setting this key/value pair:
+
+`
+pageOptions:
+  noIndex: true
+`
+
+### Environments
+
+For optimal perfomance in your production environment, copy [user/env/mysite.com/config/system.yaml](https://github.com/kittyfishfrommars/grav-theme-oxygen/blob/main/_demo/env/mysite.com/system.yaml). Then rename the folder `mysite.com` to your production url without `www`.
+
+
+## Build Tools
+
+For developers who wish to modify this theme.
+
+Requirements:
+* [Node.js](https://nodejs.org/)
+* [npm](https://docs.npmjs.com/)
+* [HTTP Server](https://httpd.apache.org/) with [this theme's skeleton](https://github.com/kittyfishfrommars/grav-skeleton-oxygen/releases) running
+
+
+### Gulp 
+
+A taskrunner to compile JS and SCSS source files so you can adapt this theme to your liking.
+For example, you might want to configure colors and fonts in [src/scss/_config.less](https://github.com/kittyfishfrommars/grav-theme-oxygen/blob/main/src/scss/_config.scss).
+
+
+**Installation**
+
+Navigate to `user/themes/oxygen` and install necessary dependencies once with:
+
+`npm install`
+
+This process may take a while populating `node_modules`. Please wait patiently.
+
+
+**Usage**
+
+`npm run serve` for development
+
+* opens a livereload browser tab at `http://localhost:8080`, this path is configurable in [gulp.config.json](https://github.com/kittyfishfrommars/grav-theme-oxygen/blob/main/gulp.config.json)
+
+`npm run build` for production
+
+* concatenates and minifies assets for deployment
+
+
+For security purposes, please make sure not to deploy the `node_modules` folder to any production environment.
+
+
+## Troubleshooting
+
+### 500 Internal Server Error
+
+If you're getting this error, it means your current installation does not yet have the proper [permissions](https://learn.getgrav.org/17/troubleshooting/permissions).
+
+The nuclear option is, of course, **not recommended for production**:
+
+    chmod 777 grav-skeleton-oxygen -R
+
+Where `grav-skeleton-oxygen` is your installation folder.
+
+### Incorrect content rendering
+
+If your content renders as markdown instead of nicely formatted html, this is most solved by editing the settings in `/user/config/system.yaml`. Please see [Setup](#setup) for detailed instructions.
+
+
+## Showcases in the wild
+
+* [ict.unito.it](https://ict.unito.it/) - Università di Torino: Innovazione Sociale, Comunicazione e Nuove Tecnologie (italian)
+* [juedisch.info](https://juedisch.info) - Jewish activism (german)
+* [kittyfishfrommars.github.io](https://kittyfishfrommars.github.io/grav/grav-theme-oxygen/) - Theme "Oxygen" developed by [kittyfishfrommars](https://github.com/kittyfishfrommars)
+* [behold.metamotive.co.nz](https://behold.metamotive.co.nz/solarize) - Original Grav port "Solarize" by [hughbris](https://github.com/hughbris/)
+
+Please drop me a line if you want yours to be included (hey, it's free publicity).
+
+
+## Credits
+
+* Theme "Oxygen" developed by [kittyfishfrommars](https://github.com/Kittyfishfrommars) under the [MIT License](https://opensource.org/license/mit/), for modifications see [Changelog](https://github.com/Kittyfishfrommars/grav-theme-oxygen/blob/main/CHANGELOG.md)
+* Based on the Grav port by [hughbris](https://github.com/hughbris/grav-theme-solarize/) under the [MIT License](https://github.com/hughbris/grav-theme-solarize/blob/develop/LICENSE)
+* Developed for [Grav CMS](https://getgrav.org/) under the [MIT License](https://github.com/getgrav/grav/blob/master/LICENSE.txt)
+* Header image created by [DeepAI](https://deepai.org/machine-learning-model/text2img) under its [Generated Content License](https://deepai.org/terms-of-service/terms-of-service)
+* Design inspired by "Solarize" of [templated.co](https://templated.co) under the [Creative Commons 3.0 Attribution License](https://creativecommons.org/licenses/by/3.0/)
+* Font Awesome 4.0.3 by @davegandy - [fontawesome.io](http://fontawesome.io) @fontawesome License - [fontawesome.io/license](https://fontawesome.io/license) (Font: SIL OFL 1.1, CSS: MIT License)
+* OpenSans[wdth,wght].woff2: Copyright 2020 The Open Sans Project Authors [github.com/googlefonts/opensans](https://github.com/googlefonts/opensans) (SIL OFL 1.1)

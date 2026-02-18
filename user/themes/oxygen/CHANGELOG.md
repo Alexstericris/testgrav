@@ -1,221 +1,118 @@
-# v2.1.2
-## 8/25/2025
+# v2.1.12
+## 14-02-2026
+1. [](#bugfix) Fix banner image source in `_demo` files
 
-1. [](#new)
-    * Added `comments.html.twig` for native Comments Pro support
+# v2.1.11
+## 10-10-2025
+1. [](#improved)
+* [#22](https://github.com/kittyfishfrommars/grav-theme-oxygen/issues/22) Add local/remote toggle for banner, thanks [@pmoreno-rodriguez](https://github.com/pmoreno-rodriguez)
 
-# v2.1.1
-## 03/14/2025
+# v2.1.10
+## 03-08-2025
 
-1. [](#new)
-    * Added modular template
-    * Added multilingual support for the theme options in the admin panel. Initial translations include English and Spanish. 
-    * Added a new toggle option in the admin panel for modular pages to enable or disable the `onepage_menu` functionality directly from the page settings.
 1. [](#bugfix)
-    * Removed double `login-status.html.twig` reference, and added `ignore missing` on include in `base.html.twig`
-
-# v2.1.0
-## 03/08/2025
-
-1. [](#new)
-   * Added Estonian translation [PR#205](https://github.com/getgrav/grav-theme-quark/pull/205)
-   * Added Japanese translation [PR#126](https://github.com/getgrav/grav-theme-quark/pull/126)
-   * Added Polish translation [PR#173](https://github.com/getgrav/grav-theme-quark/pull/173)
-
-# v2.0.5
-## 03/05/2025
-
-1. [](#improved)
-   * Added `login-status.html.twig` if available
-   * Updated `partials/taxonomylist.html.twig` to support latest updates in that plugin
-   * Added `children_only: true` to sidebar template
-   * Fixed `label-primary` class in relatedpages template
-   * Updated README.md [#PR208](https://github.com/getgrav/grav-theme-quark/pull/208)
-   * Applied taxonomy value date format setting in Archives template [#PR165](https://github.com/getgrav/grav-theme-quark/pull/165)
-
-# v2.0.4
-## 09/29/2021
-
-1. [](#new)
-   * Added simple gallery modular page for `lightbox-gallery` plugin
-2. [](#bugfix)
-    * Fixed `radio` form field error when admin isn't installed
-    * Translate `grid size` text
-
-# v2.0.3
-## 06/08/2020
-
-1. [](#improved)
-    * Updated some JS libraries
-    * Simplified navigation macro
-    * Use `site.title` in logo alt text [#139](https://github.com/getgrav/grav-theme-quark/pull/109)
-
-# v2.0.2
-## 08/09/2019
-
-1. [](#improved)
-    * Allow for overriding of `{% block content %}{% endblock %}`
-    * Improved default `.table` styling
-    * Simplified navigation macro
-1. [](#bugfix)
-    * Fixed issue with Prism Highlight [prism-highlight#1](https://github.com/trilbymedia/grav-plugin-prism-highlight/issues/1)
-    * Use slug for onpage links [#115](https://github.com/getgrav/grav-theme-quark/issues/115)
-    * Fixed 2 minor YAML linting issues
-
-# v2.0.1
-## 05/09/2019
-
-1. [](#improved)
-    * Typo in blueprints [#109](https://github.com/getgrav/grav-theme-quark/pull/109)
-    * Added convenience scripts to `package.json` [#110](https://github.com/getgrav/grav-theme-quark/pull/110)
-    * Added Czech translation [#106](https://github.com/getgrav/grav-theme-quark/pull/106)
-    * Added Chinese translation [#114](https://github.com/getgrav/grav-theme-quark/pull/114)
-    * Removed redundant code [#104](https://github.com/getgrav/grav-theme-quark/pull/104)
-    * Updated to match Archives plugin translation output
-1. [](#bugfix)
-    * Bugfix to class in macro [#105](https://github.com/getgrav/grav-theme-quark/pull/105)
-    * Bugfix a z-index issue [#75](https://github.com/getgrav/grav-theme-quark/pull/75)
+* [#25](https://github.com/kittyfishfrommars/grav-theme-oxygen/issues/25) Fix GPM installation
+2. [](#new)
+* [PR #32](https://github.com/kittyfishfrommars/grav-theme-oxygen/pull/32) Customise site title separator character, thanks [@petira](https://github.com/petira)
+3. [](#improved)
+* [PR #31](https://github.com/kittyfishfrommars/grav-theme-oxygen/pull/31) Optionally display callout button, thanks [@petira](https://github.com/petira)
+4. [](#bugfix)
+* [PR #30](https://github.com/kittyfishfrommars/grav-theme-oxygen/pull/30) Fix module links blueprint description, thanks [@petira](https://github.com/petira)
 
 # v2.0.0
-## 04/11/2019
-
-1. [](#improved)
-    * Updated to use new `GRAV` core language prefix
-    * Updated [Spectre.css](https://picturepan2.github.io/spectre/) to latest `0.5.8` version
-    * Support for 2FA panel styling
-    * Updated to Yarn 4.0 syntax
-    * Restructured SCSS to ensure easier Spectre updates in future
-1. [](#bugfix)
-    * Some checkboxes fixes for Forms 3.0
-    * More Twig 2.0 compatibility fixes
-    * Fixed a Twig 2.0 issue with assets rendering
-    
-# v1.2.6
-## 03/21/2019
+## 20-03-2025
 
 1. [](#new)
-    * Set Dependency of Grav 1.5.10+ which has support for new **Deferred Block** Twig extension
-    * Implement assets rendering using **Deferred Block** Twig extension 
+* **Oxygen v2.0.0 Breaking Changes:** This major release improves integration with the admin panel. Please import all [_demo](https://github.com/kittyfishfrommars/grav-theme-oxygen/tree/main/_demo) content for a new data structure
+* Introduce modules as building blocks
+* [#3](https://github.com/kittyfishfrommars/grav-theme-oxygen/issues/3) Add configurable pages
+* [#7](https://github.com/kittyfishfrommars/grav-theme-oxygen/issues/7) Add dynamic footer links
+* [#6](https://github.com/kittyfishfrommars/grav-theme-oxygen/issues/6) Add full-width hooks section
+2. [](#improved)
+* Improved and simplified error and sitemap pages
+* Add cs language support to sitemap, thanks [@petira](https://github.com/petira)
+* Layout fixes: hover styles to main navigation, font-sizes, margins/paddings
+* [#11](https://github.com/kittyfishfrommars/grav-theme-oxygen/issues/11) Add CSS or image float in content
+* [#8](https://github.com/kittyfishfrommars/grav-theme-oxygen/issues/2) Allow link lists with relative URLs in admin panel
+* [#5](https://github.com/kittyfishfrommars/grav-theme-oxygen/issues/2) Update README with more detailed [Setup Instructions](https://github.com/kittyfishfrommars/grav-theme-oxygen/tree/main?tab=readme-ov-file#setup)
+3. [](#bugfix)
+* [#13](https://github.com/kittyfishfrommars/grav-theme-oxygen/issues/13) Permanently highlight active child items in navigation
+* [#4](https://github.com/kittyfishfrommars/grav-theme-oxygen/issues/4) Correctly save footer values in admin panel
+* [#2](https://github.com/kittyfishfrommars/grav-theme-oxygen/issues/2) Fix fontawesome reference for inherited themes
+* [#1](https://github.com/kittyfishfrommars/grav-theme-oxygen/issues/1) Update sidebar examples
+* ...and flimsy sample story
 
-# v1.2.5
-## 12/07/2018
+# v1.0.4
+## 14-10-2024
 
-1. [](#improved)
-    * Updated [Spectre.css](https://picturepan2.github.io/spectre/) to latest `0.5.7` version
 1. [](#bugfix)
-    * Fixed missing `</html>` close tag in bae template [#76](https://github.com/getgrav/grav-theme-quark/pull/76)    
-
-# v1.2.4
-## 11/12/2018
-
-1. [](#improved)
-    * Updated [Spectre.css](https://picturepan2.github.io/spectre/) to latest `0.5.5` version
-    * Added link support to modular `features` [#39](https://github.com/getgrav/grav-theme-quark/pull/39/)
-    * Remove desktop menu when in mobile mode [#59](https://github.com/getgrav/grav-theme-quark/pull/59/)
-    * Support modular `text` full-width if no image [#70](https://github.com/getgrav/grav-theme-quark/issues/70)
-    * Shim for IE support of BrickLayer.js [#64](https://github.com/getgrav/grav-theme-quark/issues/64)
-1. [](#bugfix)
-    * Fixed `continue_link:` showing up as toggled [#65](https://github.com/getgrav/grav-theme-quark/issues/65)
-    * Fixed issue with modular pages not hidden in on-page menu with `visible: false` [#71](https://github.com/getgrav/grav-theme-quark/issues/71)
-
-
-# v1.2.3
-## 11/05/2018
-
-1. [](#improved)
-    * Moved footer into standalone twig to allow for easier extensibility [#63](https://github.com/getgrav/grav-theme-quark/pull/63)
-1. [](#bugfix)
-    * Fix variable name for prouction mode [#61](https://github.com/getgrav/grav-theme-quark/pull/61)
-    * Fix layout size in features blueprint [#67](https://github.com/getgrav/grav-theme-quark/pull/67)
-    * Fix active page logic in `nav` so there's no empty class attributes [#68](https://github.com/getgrav/grav-theme-quark/pull/68)
-    * Fix for features blueprint because `class` didn't work [#69](https://github.com/getgrav/grav-theme-quark/pull/69)
-
-# v1.2.2
-## 10/24/2018
-
-1. [](#improved)
-    * Changed nav macro to format supported by Twig 2.0
-    * Updated `partials/form-messages.html.twig` to be more inline with latest Forms plugin
-1. [](#bugfix)
-    * Make the theme to work with Twig auto-escaping turned on
-    * Moved language strings under `THEME_QUARK`
-
-# v1.2.1
-## 08/23/2018
-
-1. [](#improved)
-    * Added additional "mobile custom logo" support
-1. [](#bugfix)
-    * Addressed some CSS issues by forcing logo height
-
-# v1.2.0
-## 08/23/2018
-
-1. [](#new)
-    * Added new "custom logo" support [#3](https://github.com/getgrav/grav-theme-quark/issues/3)
-    * Added option JSON feed syndication support in sidebar [#47](https://github.com/getgrav/grav-theme-quark/pull/47)
-    * Added basic form field `array` styling
-
-# v1.1.0
-## 07/25/2018
-
-1. [](#new)
-    * Responsive font sizing [#28](https://github.com/getgrav/grav-theme-quark/issues/28)
-1. [](#improved)
-    * Updated [Spectre.css](https://picturepan2.github.io/spectre/) to latest `0.5.3` version
-    * Make blog settings toggleable [#38](https://github.com/getgrav/grav-theme-quark/pull/38)
-1. [](#bugfix)
-    * Proper fix for sticky footer in IE10 and IE11 [#21](https://github.com/getgrav/grav-theme-quark/issues/21)
-    * Fix for lists wrapping weirdly due to `outside` attribute
-    * Updated checkbox + radio to take into account `client_side_validation` form option
-    * Fixes for fallback values [#37](https://github.com/getgrav/grav-theme-quark/pull/37)
-    * Fix inheritance for images folder [#30](https://github.com/getgrav/grav-theme-quark/pull/30)
-    * Added blueprint option for `continue_link` [#45](https://github.com/getgrav/grav-theme-quark/issues/45)
-    * Added blueprint option for Feature `class` [#14](https://github.com/getgrav/grav-theme-quark/issues/14)
-    * Fixed `Duplicate ID` issues with modular sections.  Might break CSS on first load, need to refresh to pick up new CSS [#24](https://github.com/getgrav/grav-theme-quark/issues/24)
-    * Fixed Text feature alignment issue [#4](https://github.com/getgrav/grav-theme-quark/issues/4)
-    * Overlapping menu and mobile button [#7](https://github.com/getgrav/grav-theme-quark/issues/7)
+* Decrease logo font-size for tablet (<1280), slightly decrease navigation item margins
 
 # v1.0.3
-## 05/11/2018
+## 13-10-2024
 
 1. [](#new)
-    * Added new primary button mixin
-1. [](#improved)
-    * Updated [Spectre.css](https://picturepan2.github.io/spectre/) to latest `0.5.1` version
-    * Improved default login styling
-    * Removed core Spectre.css override to make upgrading Spectre easier
-    * Added screenshot to README.md
-    * Override focus to prevent overzealous blue blurs
-1. [](#bugfix)
-    * Fix for `highlight` plugin not changing background of code blocks
-    * Removed extraneous `dump()` in Twig output
+* Add page-specific [Theme Option](https://github.com/kittyfishfrommars/grav-theme-oxygen/blob/main/README.md#page-options) for granular control of search engine indexing by page. Make sure to also enable [site-wide indexing](https://github.com/kittyfishfrommars/grav-theme-oxygen/blob/main/README.md#theme-options) once you go live.
 
 # v1.0.2
-## 02/19/2018
+## 08-08-2024
 
 1. [](#new)
-    * Added toggle options to enable Spectre.css _experimentals_ and _icons_ CSS files
-    * Switched to a fork of LineAwesome icons compatible with FontAwesome 4.7.0
-1. [](#improved)
-    * Font tweaks
-1. [](#bugfix)
-    * Pagination fixes
+* Add site-wide [Theme Option](https://github.com/kittyfishfrommars/grav-theme-oxygen/blob/main/README.md#theme-options) to enable search engine indexing (default: disabled - indexing is not allowed)
+2. [](#improved)
+* Include sample `user/env/mysite.com` folder for production settings, see [README](https://github.com/kittyfishfrommars/grav-theme-oxygen/blob/main/README.md#environments)
 
 # v1.0.1
-##  01/22/2018
+## 17-07-2024
 
 1. [](#new)
-    * Added blueprints for admin editing
-1. [](#improved)
-    * Use default lang from `site.yaml`
-1. [](#bugfix)
-    * Fixed Current path to address issues with extending Quark
-    * Fixed parallax to start in same position as standard
-    * Fixed modular image size
+* Add gulp taskrunner build tools, usage `npm run serve` and `npm run build`, see [README](https://github.com/kittyfishfrommars/grav-theme-oxygen/blob/main/README.md#build-tools)
+2. [](#improved)
+* Update jQuery to v3.6.1 to improve plugin compatibility
+3. [](#bugfix)
+* Fix show logo on narrow screens
+* Fix profile image size on narrow screens
 
 # v1.0.0
-##  12/28/2017
+## 14-02-2024
 
-1. [](#new)
-    * ChangeLog started...
+1. [Release](#release)
+    1. [](#new)
+        - Oxygen by [kittyfishfrommars](https://github.com/kittyfishfrommars) is a continuation of [hughbris](https://github.com/hughbris/grav-theme-solarize) work for [Grav CMS](http://github.com/getgrav/grav)
+2. [Accessibility](#accessibility)
+    1. [](#new)
+        - Typography: increase font-size, unify line-height to improve readability
+        - Footer icons: add aria-label for screenreaders to footer icons
+        - Color scheme: change background from white to light grey to reduce eye-strain
+        - Contrast: new color scheme to pass accessibility audit
+3. [Performance](#performance)
+    1. [](#new)
+        - Remove IE8 support
+        - Improve JS/CSS loading strategy
+        - Refactor JS/CSS folders for easier automation
+        - Convert iconfont to woff2
+        - Introduce fingerprints to help with [Cache-Control](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control) busting
+4. [Maintenance](#maintenance)
+    1. [](#new)
+        - Set header banner on a per-page basis in admin panel
+        - Define footer content on a per-site basis in admin panel
+        - Configure sidebars on a per-page basis in admin panel
+        - Add modular links to be configured in admin panel
+        - Add custom error page via [grav-plugin-error](https://github.com/getgrav/grav-plugin-error) dependency
+        - Add XML sitemap and custom HTML sitemap via [grav-plugin-sitemap](https://github.com/getgrav/grav-plugin-sitemap)
+        - Dynamically refer to sitemap from error page
+        - Add languages.yaml in theme root to customize plugin messages
+        - Introduce optional helper classes to style some components via yaml
+        - Refactor notices to CSS grid, set individual icons and colors in page, fix overlong texts
+        - Configurable grid
+        - Add overview of FontAwesome 4.0.3 to elements page
+        - Add svg to hamburger menu to become truly iconfont agnostic, allowing updates
+        - Predefined settings for `user/env/config/localhost` and `user/env/config/mysite.com` environments
+5. [Legal](#legal)
+    1. [](#new)
+        - Host fonts locally to comply with [GDPR](https://www.cookieyes.com/documentation/features/integrations/google-fonts-and-gdpr/) in the EU
+        - Disable popularity statistics by default to eliminate the need for a cookie banner
+        - Add default Contact/Legal Notice page, as required by [national law](https://secureprivacy.ai/blog/what-is-an-impressum)
+        - Link to Legal Notice in footer
+        - Add credits and licenses
+        - Add privacy policy placeholder, to be updated by yourself
