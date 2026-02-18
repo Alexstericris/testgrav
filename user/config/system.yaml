@@ -37,7 +37,7 @@ pages:
   type: regular
   dirs:
     - 'page://'
-  theme: custom-theme
+  theme: oxygen
   order:
     by: default
     dir: asc
