@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
+<head>
+    <meta charset="utf-8" />
+    <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include 'partials/metadata.html.twig' %}
+    <link rel="icon" type="image/png" href="{{ url('theme://images/logo.png') }}" />
+    
+    {% block stylesheets %}
+        {% do assets.addCss('theme://css/custom.css', 100) %}
+        {% do assets.addCss('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css') %}
+    {% endblock %}
+    {{ assets.css() }}
+</head>
+<body class="{{ page.header.body_classes }}">
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <a href="{{ base_url == '' ? '/' : base_url }}">{{ site.title|e('html') }}</a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    {% for p in pages.children.visible %}
+                    <li class="{{ p.active ? 'active' : '' }}">
+                        <a href="{{ p.url }}">{{ p.menu }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; {{ "now"|date("Y") }} {{ site.title }}. All rights reserved.</p>
+        </div>
+    </footer>
+
+    {% block javascripts %}
+        {% do assets.addJs('theme://js/main.js', 100) %}
+    {% endblock %}
+    {{ assets.js() }}
+</body>
+</html>
