@@ -1,0 +1,18 @@
+name: Custom Oxygen
+slug: custom-oxygen
+type: theme
+version: 0.1.0
+description: oxygen extension
+icon: rebel
+author:
+  name: Alex Cristea
+  email: alex.sterian.cristea@gmail.com
+homepage: https://github.com/alex-cristea/grav-theme-custom-oxygen
+demo: http://demo.yoursite.com
+keywords: grav, theme, etc
+bugs: https://github.com/alex-cristea/grav-theme-custom-oxygen/issues
+readme: https://github.com/alex-cristea/grav-theme-custom-oxygen/blob/develop/README.md
+license: MIT
+
+dependencies:
+  - { name: grav, version: '>=1.6.0' }

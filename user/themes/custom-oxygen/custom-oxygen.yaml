@@ -1,0 +1,13 @@
+streams:
+ schemes:
+   theme:
+     type: ReadOnlyStream
+     prefixes:
+       '':
+         - 'user://themes/custom-oxygen'
+         - 'user://themes/oxygen'
+
+enabled: true
+dropdown:
+  enabled: true
+color: blue
