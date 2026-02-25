@@ -74,6 +74,17 @@ h1, h2, h3, h4, h5, h6 {
   color: #ffffff; /* White text on dark/transparent header */
 }
 
+.header-transparent #header:not(.scrolled) .desktop-menu .nested-children a {
+  color: #000;
+}
+.header-transparent #header:not(.scrolled) .desktop-menu .nested-children a:hover {
+  color: #000;
+}
+
+.header-transparent #header:not(.scrolled) .dropmenu .nested-children ul li a:hover, .header-transparent #header:not(.scrolled) .dropmenu .nested-children ul li a.active{
+ color: #000 !important;
+}
+
 /* Scrolled state (if implemented by JS or theme) */
 .header-transparent #header.scrolled {
   background-color: rgba(255, 255, 255, 0.95);
@@ -92,13 +103,11 @@ h1, h2, h3, h4, h5, h6 {
 
 #header .dropmenu ul li a:hover,
 #header .dropmenu ul li a.active {
-  color: var(--color-primary-500) !important;
-  border-bottom: 2px solid var(--color-primary-500); /* Underline style */
 }
 
 .header-transparent #header:not(.scrolled) .dropmenu ul li a:hover,
 .header-transparent #header:not(.scrolled) .dropmenu ul li a.active {
-   color: #ffffff !important;
+   color: #ffffff ;
    border-bottom-color: #ffffff;
 }
 
@@ -140,7 +149,7 @@ a.button, .button {
 }
 
 a.button:hover, .button:hover {
-  background-color: transparent;
+  background-color: var(--color-neutral-50);
   color: var(--color-neutral-900);
 }
 
@@ -159,6 +168,22 @@ img {
 
 img:hover {
   filter: grayscale(0%);
+}
+
+.btn, .button{
+  height: inherit;
+}
+
+#header .navbar-section{
+  height: inherit;
+}
+
+#header {
+  height: 3.1rem;
+}
+
+body.header-fixed.header-animated #header.scrolled{
+  height: 3.1rem;
 }
 
 /* Quote styling - bold, impactful */

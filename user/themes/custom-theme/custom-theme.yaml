@@ -13,7 +13,7 @@ grid-size: grid-lg
 header-fixed: true
 header-animated: true
 header-dark: false
-header-transparent: false
+header-transparent: true
 sticky-footer: true
 blog-page: &#039;/blog&#039;
 spectre:
