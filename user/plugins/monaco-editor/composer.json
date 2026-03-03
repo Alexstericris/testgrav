@@ -1,0 +1,25 @@
+{
+  "name": "alex-cristea/monaco-editor",
+  "type": "grav-plugin",
+  "description": "Monaco editor",
+  "version": "1.0.0",
+  "keywords": ["plugin"],
+  "homepage": "https://github.com/alex-cristea/grav-plugin-monaco-editor",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Alex Cristea",
+      "email": "alex.sterian.cristea@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=7.1.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Grav\\Plugin\\MonacoEditor\\": "classes/"
+    },
+    "classmap":  ["monaco-editor.php"]
+  }
+}

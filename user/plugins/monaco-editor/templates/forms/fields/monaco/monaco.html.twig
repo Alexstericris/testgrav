@@ -1,0 +1,29 @@
+{% set version = "monaco" %}
+
+{% block label %}
+    {% if field.label %}
+        {% set hint = field.help ? 'data-hint="' ~ field.help|tu|raw ~ '"' : '' %}
+        <div class="form-label form-field hint--bottom" {{ hint }}>{{ field.label|tu|raw }}</div>
+    {% endif %}
+{% endblock %}
+
+{% block field %}
+    <div class="form-field {{ field.classes|default('') }}">
+        <div class="form-data">
+      <textarea
+          class="monaco"
+          name="{{ (scope ~ field.name)|fieldName }}"
+          {% if field.disabled or isDisabledToggleable %}disabled="disabled"{% endif %}
+          {% if field.placeholder %}placeholder="{{ field.placeholder|tu }}"{% endif %}
+          {% if field.autofocus in ['on', 'true', 1] %}autofocus="autofocus"{% endif %}
+          {% if field.novalidate in ['on', 'true', 1] %}novalidate="novalidate"{% endif %}
+          {% if field.readonly in ['on', 'true', 1] %}readonly="readonly"{% endif %}
+        data-language="{{ field.language|default('markdown') }}"
+          data-theme="{{ field.theme|default('vs-dark') }}"
+          data-font-size="{{ field.font_size|default(14) }}"
+          data-word-wrap="{{ field.word_wrap|default('on') }}"
+          data-height="{{ field.height|default('600px') }}"
+      >{{ value|join("\n")|e("html") }}</textarea>
+        </div>
+    </div>
+{% endblock %}

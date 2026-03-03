@@ -1,0 +1,29 @@
+enabled: true
+text_var: Custom Text added by the **Monaco Editor** plugin (disable plugin to remove)
+menu:
+  -
+    title: File
+    items: 'newdocument print'
+  -
+    title: Edit
+    items: 'undo redo | cut copy paste pastetext | selectall | searchreplace'
+  -
+    title: Insert
+    items: 'media link image | pagebreak charmap anchor hr insertdatetime nonbreaking toc'
+  -
+    title: View
+    items: 'visualchars visualaid | fullscreen'
+  -
+    title: Format
+    items: 'bold italic underline strikethrough superscript subscript | formats | removeformat'
+  -
+    title: Table
+    items: 'inserttable tableprops deletetable | cell row column'
+  -
+    title: Tools
+    items: code
+toolbar:
+  -
+    row: 'newdocument print | cut copy paste | undo redo | searchreplace visualchars | table image media emoticons toc | insertdatetime pagebreak charmap | link unlink anchor | blockquote nonbreaking hr | code preview'
+  -
+    row: 'formatselect | fontselect fontsizeselect | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | indent outdent | forecolor backcolor | bullist numlist | superscript subscript | removeformat | fullscreen'

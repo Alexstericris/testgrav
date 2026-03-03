@@ -1,0 +1,242 @@
+name: Monaco Editor
+slug: monaco-editor
+type: plugin
+version: 0.1.0
+description: Monaco editor
+icon: plug
+author:
+  name: Alex Cristea
+  email: alex.sterian.cristea@gmail.com
+homepage: https://github.com/alex-cristea/grav-plugin-monaco-editor
+demo: http://demo.yoursite.com
+keywords: grav, plugin, etc
+bugs: https://github.com/alex-cristea/grav-plugin-monaco-editor/issues
+docs: https://github.com/alex-cristea/grav-plugin-monaco-editor/blob/develop/README.md
+license: MIT
+
+dependencies:
+  - { name: grav, version: '>=1.6.0' }
+
+form:
+  validation: loose
+  fields:
+    enabled:
+      type: toggle
+      label: PLUGIN_ADMIN.PLUGIN_STATUS
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+    text_var:
+      type: text
+      label: PLUGIN_MONACO_EDITOR.TEXT_VARIABLE
+      help: PLUGIN_MONACO_EDITOR.TEXT_VARIABLE_HELP
+    editor_defaults:
+      type: section
+      title: Editor Defaults
+      underline: true
+
+    options.language:
+      type: select
+      label: Default Language
+      default: markdown
+      options:
+        markdown: Markdown
+        yaml: YAML
+        json: JSON
+        html: HTML
+        css: CSS
+        javascript: JavaScript
+        typescript: TypeScript
+        php: PHP
+        plaintext: Plain Text
+
+    options.theme:
+      type: select
+      label: Theme
+      default: vs-dark
+      options:
+        vs: Light
+        vs-dark: Dark
+        hc-black: High Contrast Dark
+        hc-light: High Contrast Light
+
+    options.font_size:
+      type: number
+      label: Font Size
+      default: 14
+      min: 10
+      max: 32
+
+    options.line_height:
+      type: number
+      label: Line Height
+      default: 22
+      min: 14
+      max: 48
+
+    options.font_family:
+      type: text
+      label: Font Family
+      default: "'Fira Code', 'Cascadia Code', Consolas, monospace"
+      placeholder: "'Fira Code', Consolas, monospace"
+
+    options.font_ligatures:
+      type: toggle
+      label: Font Ligatures
+      default: true
+      options:
+        1: Enabled
+        0: Disabled
+
+    options.word_wrap:
+      type: select
+      label: Word Wrap
+      default: "on"
+      options:
+        "on": On
+        "off": Off
+        wordWrapColumn: At Column
+        bounded: Bounded
+
+    options.height:
+      type: text
+      label: Editor Height
+      default: 600px
+      placeholder: 600px
+
+    layout_section:
+      type: section
+      title: Layout
+      underline: true
+
+    options.line_numbers:
+      type: select
+      label: Line Numbers
+      default: "on"
+      options:
+        "on": On
+        "off": Off
+        relative: Relative
+        interval: Interval
+
+    options.minimap:
+      type: toggle
+      label: Minimap
+      default: false
+      options:
+        1: Enabled
+        0: Disabled
+
+    options.scroll_beyond_last_line:
+      type: toggle
+      label: Scroll Beyond Last Line
+      default: false
+      options:
+        1: Enabled
+        0: Disabled
+
+    editing_section:
+      type: section
+      title: Editing
+      underline: true
+
+    options.tab_size:
+      type: number
+      label: Tab Size
+      default: 4
+      min: 1
+      max: 8
+
+    options.insert_spaces:
+      type: toggle
+      label: Insert Spaces (vs Tabs)
+      default: true
+      options:
+        1: Enabled
+        0: Disabled
+
+    options.format_on_paste:
+      type: toggle
+      label: Format on Paste
+      default: true
+      options:
+        1: Enabled
+        0: Disabled
+
+    options.auto_indent:
+      type: select
+      label: Auto Indent
+      default: full
+      options:
+        none: None
+        keep: Keep
+        brackets: Brackets
+        advanced: Advanced
+        full: Full
+
+    options.auto_closing_brackets:
+      type: select
+      label: Auto Close Brackets
+      default: languageDefined
+      options:
+        always: Always
+        languageDefined: Language Defined
+        beforeWhitespace: Before Whitespace
+        never: Never
+
+    cursor_section:
+      type: section
+      title: Cursor & Scroll
+      underline: true
+
+    options.cursor_blinking:
+      type: select
+      label: Cursor Blinking
+      default: smooth
+      options:
+        blink: Blink
+        smooth: Smooth
+        phase: Phase
+        expand: Expand
+        solid: Solid
+
+    options.smooth_scrolling:
+      type: toggle
+      label: Smooth Scrolling
+      default: true
+      options:
+        1: Enabled
+        0: Disabled
+
+    options.mouse_wheel_zoom:
+      type: toggle
+      label: Mouse Wheel Zoom
+      default: true
+      options:
+        1: Enabled
+        0: Disabled
+
+    suggestions_section:
+      type: section
+      title: Suggestions
+      underline: true
+
+    options.quick_suggestions:
+      type: toggle
+      label: Quick Suggestions
+      default: true
+      options:
+        1: Enabled
+        0: Disabled
+
+    options.parameter_hints:
+      type: toggle
+      label: Parameter Hints
+      default: true
+      options:
+        1: Enabled
+        0: Disabled
