@@ -1,0 +1,20 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block body %}
+<main class="flex-grow flex flex-col items-center justify-center min-h-[50vh] px-4 sm:px-6 lg:px-8 py-16 bg-gray-50">
+    <div class="text-center">
+        <h1 class="text-9xl font-extrabold text-indigo-100 animate-pulse">404</h1>
+        <div class="absolute mt-[-4rem]">
+            <h2 class="text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">{{ 'THEME_TAILWIND.ERROR'|t }}</h2>
+            <p class="mt-4 text-xl text-gray-500">
+                 {{ page.content|raw }}
+            </p>
+        </div>
+    </div>
+    <div class="mt-16 z-10">
+        <a href="{{ home_url }}" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10 shadow-lg transform hover:scale-105 transition duration-150 ease-in-out">
+            Go back home
+        </a>
+    </div>
+</main>
+{% endblock %}

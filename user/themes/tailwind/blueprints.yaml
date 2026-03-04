@@ -1,0 +1,42 @@
+name: Tailwind
+slug: tailwind
+type: theme
+version: 0.1.0
+description: tailwind theme
+icon: rebel
+author:
+  name: Alex Cristea
+  email: alex.sterian.cristea@gmail.com
+homepage: https://github.com/alex-cristea/grav-theme-tailwind
+demo: http://demo.yoursite.com
+keywords: grav, theme, etc
+bugs: https://github.com/alex-cristea/grav-theme-tailwind/issues
+readme: https://github.com/alex-cristea/grav-theme-tailwind/blob/develop/README.md
+license: MIT
+
+dependencies:
+  - { name: grav, version: '>=1.6.0' }
+
+form:
+    validation: loose
+    fields:
+        dropdown.enabled:
+            type: toggle
+            label: Dropdown in Menu
+            highlight: 1
+            default: 1
+            options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+            validate:
+                type: bool
+        production:
+            type: toggle
+            label: Production Mode
+            highlight: 1
+            default: 1
+            options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+            validate:
+                type: bool

@@ -1,0 +1,85 @@
+{% set extension = config.theme.production ? '.min' : '' %}
+<!DOCTYPE html>
+<html lang="{{ (grav.language.getActive ?: grav.config.site.default_lang)|e }}">
+<head>
+    {% block head %}
+        <meta charset="utf-8" />
+        <title>{% if header.title %}{{ header.title|e }} | {% endif %}{{ site.title|e }}</title>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% include 'partials/metadata.html.twig' %}
+
+        <link rel="icon" type="image/png" href="{{ url('theme://images/logo.png')|e }}" />
+        <link rel="canonical" href="{{ page.url(true, true)|e }}" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    {% endblock head %}
+
+    {% block stylesheets %}
+        {% do assets.addCss('theme://dist/css/site.css', 98) %}
+    {% endblock %}
+
+    {% block javascripts %}
+	    {% do assets.addJs('theme://js/main' ~ extension ~ '.js', 98) %}
+    {% endblock %}
+
+    {% block assets deferred %}
+    {{ assets.css()|raw }}
+    {{ assets.js()|raw }}
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; }
+    </style>
+    {% endblock %}
+</head>
+<body id="top" class="flex flex-col min-h-screen bg-white text-gray-900 {{ page.header.body_classes|e }} {{ config.theme.production ?: 'debug-screens' }}">
+
+{% block header %}
+    <header class="bg-white shadow-sm sticky top-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a class="text-2xl font-serif font-bold tracking-tight text-gray-900 hover:text-gray-700 transition duration-150 ease-in-out uppercase" href="{{ home_url|e }}">
+                        {{ config.site.title|e }}
+                    </a>
+                </div>
+                {% block header_navigation %}
+                    <nav class="hidden md:flex space-x-8 items-center">
+                        {% include 'partials/navigation.html.twig' %}
+                    </nav>
+                {% endblock %}
+            </div>
+        </div>
+    </header>
+{% endblock %}
+
+{% block body %}
+    <main class="flex-grow">
+        {% block hero %}{% endblock %}
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="prose prose-lg prose-gray max-w-none mx-auto">
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+    </main>
+{% endblock %}
+
+{% block footer %}
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-4 py-6 sm:px-6 lg:px-8">
+            <div class="text-center md:text-left">
+                <p class="text-sm">&copy; {{ "now"|date("Y") }} <a href="{{ home_url|e }}" class="hover:text-gray-300">{{ config.site.title|e }}</a>. All rights reserved.</p>
+                <p class="text-xs text-gray-400 mt-2">Powered by <a href="https://getgrav.org" class="hover:text-gray-300">Grav</a></p>
+            </div>
+        </div>
+    </footer>
+{% endblock %}
+
+{% block bottom %}
+    {{ assets.js('bottom')|raw }}
+{% endblock %}
+
+</body>
+</html>

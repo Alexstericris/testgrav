@@ -49,3 +49,5 @@ system/templates/testing/*
 /tmp/
 /user/config/plugins/
 /user/plugins/tinymce-editor/
+/user/themes/tailwind/node_modules/
+/user/themes/tailwind/dist/
