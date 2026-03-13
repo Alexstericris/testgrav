@@ -42,11 +42,12 @@
             <div class="flex justify-between items-center h-20">
                 <div class="flex-shrink-0 flex items-center">
                     <a class="text-2xl font-serif font-bold tracking-tight text-gray-900 hover:text-gray-700 transition duration-150 ease-in-out uppercase" href="{{ home_url|e }}">
-                        {{ config.site.title|e }}
+{#                        {{ config.site.title|e }}#}
+                        {% include 'partials/logo.html.twig' %}
                     </a>
                 </div>
                 {% block header_navigation %}
-                    <nav class="hidden md:flex space-x-8 items-center">
+                    <nav id="mainnav" class="hidden md:flex space-x-8 items-center">
                         {% include 'partials/navigation.html.twig' %}
                     </nav>
                 {% endblock %}

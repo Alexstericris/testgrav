@@ -1,7 +1,18 @@
 ---
-title: 'Content'
-image_align: right
-body_classes: capsule
+title: 'Vineyard Church'
+export: true
+content:
+    items: '@self.modular'
+    limit: 5
+    order:
+        by: folder
+        dir: asc
+menu: Church
+slug: vineyard-church
+onpage_menu: '0'
+process:
+    markdown: true
+    twig: true
 ---
 
 <div class="flex flex-col md:flex-row gap-8 mb-12">
@@ -75,3 +86,7 @@ body_classes: capsule
             Jeden Dienstag um 19:30 Uhr im Gemeindehaus.</p>
     </div>
 </div>
+
+
+
+
