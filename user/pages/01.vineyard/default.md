@@ -14,17 +14,33 @@ process:
     markdown: true
     twig: true
 ---
-
-<div class="flex flex-col md:flex-row gap-8 mb-12">
-    <div class="flex-1">
-        <h2>Vineyard in Landsberg am Lech</h2>
-        <h4>eine moderne, lebendige und internationale Gemeinde.</h4>
-        <p>Wir glauben an den dreieinen Gott der Bibel, erleben Ihn persönlich und miteinander als Gemeinde.
-            Wir ermutigen uns gegenseitig und generationsübergreifend zur Nachfolge Jesu und geben weiter, was
-            wir von Gott empfangen haben. Als wachsende Evangelische Freikirche Vineyard wollen wir den Menschen
-            unserer Stadt Landsberg dienen und dabei Menschen erreichen, die Jesus noch nicht kennen. Wir sind dem
-            internationalen Vineyard-Verband angeschlossen.</p>
+<!--hero-->
+<div class="animate-children w-screen relative left-1/2 right-1/2 -mx-[50vw] h-[90vh] mb-24" style="background: url('image-1_test2.jpg')">
+    <div class="absolute top-[38vh] max-w-6xl mx-auto px-4 sm:px-6 lg:px-12">
+        <div class="text-white p-8 rounded-2xl backdrop-blur-[2px]" style="text-shadow: 2px 2px rgba(0,0,0,0.3)">
+            <h1 class="text-white" >Vineyard in Landsberg am Lech</h1>
+            <p>Jeden Sonntag um 10:00 oder über <a class="text-green-200 hover:text-green-300" href="example.com">Livestream</a>
+            </p>
+            <div class="flex gap-4"><a class="btn-primary-white">Besuchen</a>
+                <a class="btn-primary-white">Mitmachen</a>
+            </div>
+        </div>
     </div>
+<!--    <img src="image-1_test2.jpg" alt="image-1" class="w-full h-auto mt-0">-->
+</div>
+<!--content-->
+<div class="animate-children flex flex-col md:flex-row gap-8 mb-12">
+    <div class="flex-1">
+        <h2>Willkommen bei Vineyard Landsberg am Lech</h2>
+        <h4>Eine moderne, lebendige und internationale Gemeinde</h4>
+        <p>Wir glauben an den dreieinigen Gott der Bibel und erleben Ihn persönlich sowie gemeinsam als Gemeinde.
+            Wir ermutigen uns gegenseitig – über alle Generationen hinweg – zur Nachfolge Jesu und geben weiter, was wir
+            von Gott empfangen haben. Als wachsende Evangelische Freikirche Vineyard möchten wir den Menschen in Landsberg dienen
+            und insbesondere diejenigen erreichen, die Jesus noch nicht kennen. Wir sind Teil des internationalen Vineyard-Verbandes.</p>
+        <a class="btn-primary">Mehr über uns</a>
+    </div>
+</div>
+<div>
     <div class="flex-1 text-center">
         <iframe
             class="border-0 w-full h-96"
@@ -35,6 +51,7 @@ process:
             loading="lazy">
         </iframe>
     </div>
+
 </div>
 
 <div class="flex flex-col md:flex-row gap-8 mt-12">

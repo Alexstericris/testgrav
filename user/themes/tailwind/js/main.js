@@ -24,68 +24,51 @@ function treemenu(element, options) {
   options.nonroot = true;
 
   const listItems = element.querySelectorAll("li");
-  listItems.forEach(function(li) {
-    const subtree = li.querySelector("ul");
+  listItems.forEach(function (li) {
+    const subtree = li.querySelector(":scope > ul");
+    let closeTimer;
 
     if (subtree) {
-      // Hide subtree using Tailwind's hidden class
       subtree.classList.add("hidden", "overflow-hidden");
       li.dataset.treeState = "closed";
 
-      li.addEventListener("mouseenter", function() {
-        if (options.closeOther && li.dataset.treeState === "closed") {
-          const siblings = li.parentElement.querySelectorAll(":scope > li:not([data-tree-state='empty'])");
-          siblings.forEach(function(sibling) {
+      li.addEventListener("mouseenter", function () {
+
+        clearTimeout(closeTimer);
+
+        // close siblings
+        if (options.closeOther) {
+          const siblings = li.parentElement.querySelectorAll(":scope > li");
+          siblings.forEach(function (sibling) {
             if (sibling !== li) {
+              const sibSub = sibling.querySelector(":scope > ul");
+              if (sibSub) slideUp(sibSub, options.delay);
               sibling.dataset.treeState = "closed";
-              sibling.classList.remove(options.activeSelector.replace(".", ""));
-              const sibSubtree = sibling.querySelector(":scope > ul");
-              const sibButton = sibling.querySelector(".toggler");
-              if (sibSubtree) slideUp(sibSubtree, options.delay);
-              if (sibButton) sibButton.classList.remove("rotate-90");
             }
           });
         }
 
-        const childUl = li.querySelector(":scope > ul");
-        if (childUl) slideToggle(childUl, options.delay);
+        if (li.dataset.treeState === "closed") {
+          slideDown(subtree, options.delay);
+          li.dataset.treeState = "open";
+        }
+      });
 
-        const isOpening = li.dataset.treeState === "closed";
-        li.dataset.treeState = isOpening ? "open" : "closed";
+      li.addEventListener("mouseleave", function () {
 
-        // Toggle active class if provided
-        const activeClass = options.activeSelector.replace(".", "");
-        if (activeClass) li.classList.toggle(activeClass, isOpening);
+        closeTimer = setTimeout(() => {
+          if (li.dataset.treeState === "open") {
+            slideUp(subtree, options.delay);
+            li.dataset.treeState = "closed";
+          }
+        }, 200); // small delay for UX
       });
 
       treemenu(subtree, options);
     } else {
       li.dataset.treeState = "empty";
-      // Hide toggler for leaf nodes
     }
   });
-
-  if (options.openActive) {
-    const activeEls = element.querySelectorAll(options.activeSelector);
-
-    activeEls.forEach(function(activeEl) {
-      let el = activeEl.parentElement;
-
-      while (el && el !== element) {
-        if (el.tagName === "UL") {
-          el.classList.remove("hidden");
-        } else if (el.tagName === "LI") {
-          const childUl = el.querySelector(":scope > ul");
-          if (childUl) childUl.classList.remove("hidden");
-          el.dataset.treeState = "closed";
-          const btn = el.querySelector(".toggler");
-          if (btn) btn.classList.add("rotate-90");
-        }
-        el = el.parentElement;
-      }
-    });
-  }
-
   return element;
 }
 
@@ -97,7 +80,9 @@ function slideDown(el, duration) {
   el.style.overflow = "hidden";
   el.style.height = "0";
   el.style.transition = `height ${duration}ms ease`;
-  requestAnimationFrame(() => { el.style.height = height; });
+  requestAnimationFrame(() => {
+    el.style.height = height;
+  });
   setTimeout(() => {
     el.style.height = "";
     el.style.overflow = "";
@@ -110,7 +95,9 @@ function slideUp(el, duration) {
   el.style.height = el.scrollHeight + "px";
   el.style.overflow = "hidden";
   el.style.transition = `height ${duration}ms ease`;
-  requestAnimationFrame(() => { el.style.height = "0"; });
+  requestAnimationFrame(() => {
+    el.style.height = "0";
+  });
   setTimeout(() => {
     el.classList.add("hidden");
     el.style.height = "";
@@ -118,18 +105,29 @@ function slideUp(el, duration) {
     el.style.transition = "";
   }, duration);
 }
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view'); // trigger animation
+      } else {
+        entry.target.classList.remove('in-view'); // reset when out of view
+      }
+    });
+  },
+  { threshold: 0.1 } // trigger when 10% visible
+);
 
-function slideToggle(el, duration) {
-  if (el.classList.contains("hidden") || getComputedStyle(el).display === "none") {
-    slideDown(el, duration);
-  } else {
-    slideUp(el, duration);
-  }
-}
 
 document.addEventListener("DOMContentLoaded", () => {
   treemenu(document.querySelector("#mainnav"), {
-    delay: 220,
-    closeOther: false
+    delay: 440,
+    closeOther: false,
   });
+  document.querySelectorAll(".animate-children").forEach((el) => observer.observe(el));
+
 });
+
+
+
+

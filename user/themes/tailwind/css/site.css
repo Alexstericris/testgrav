@@ -3,3 +3,77 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2
+    px-6 py-3
+    border border-white/10 text-white font-semibold text-sm
+    bg-zinc-900
+    rounded-2xl no-underline cursor-pointer
+    transition-all duration-200 ease-in-out
+    hover:bg-[#499783]  hover:border-white/20
+    focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:ring-offset-2 focus:ring-offset-zinc-950
+    disabled:opacity-40 disabled:pointer-events-none;
+  }
+
+
+  .btn-primary-white {
+    @apply inline-flex items-center justify-center gap-2
+    px-6 py-3
+    border text-white font-semibold text-sm
+    rounded-2xl no-underline cursor-pointer
+    transition-all duration-200 ease-in-out
+    hover:text-green-200 hover:border-green-200 hover:-translate-y-0.5
+    focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2
+    disabled:opacity-50 disabled:pointer-events-none;
+  }
+}
+/* Your existing styles, slightly updated */
+.animate-children h1,
+.animate-children h2,
+.animate-children h3,
+.animate-children h4,
+.animate-children h5,
+.animate-children h6,
+.animate-children p,
+.animate-children .flex,
+.animate-children a {
+  opacity: 0;
+  transform: translateY(25px);
+}
+
+.animate-children.in-view h1 { animation: heroFade 0.8s ease forwards .2s; }
+.animate-children.in-view h2 { animation: heroFade 0.8s ease forwards .2s; }
+.animate-children.in-view h3 { animation: heroFade 0.8s ease forwards .2s; }
+.animate-children.in-view h4 { animation: heroFade 0.8s ease forwards .2s; }
+.animate-children.in-view h5 { animation: heroFade 0.8s ease forwards .2s; }
+.animate-children.in-view h6 { animation: heroFade 0.8s ease forwards .2s; }
+.animate-children.in-view p { animation: heroFade 0.8s ease forwards .4s; }
+.animate-children.in-view a { animation: heroFade 0.8s ease forwards .4s; }
+.animate-children.in-view .flex { animation: heroFade 0.8s ease forwards .6s; }
+
+.animate-children img {
+  opacity: 0;
+  transform: scale(1.08);
+}
+
+.animate-children.in-view img {
+  animation: heroImage 6s ease forwards;
+}
+
+@keyframes heroFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroImage {
+  from {
+    transform: scale(1.08);
+  }
+  to {
+    transform: scale(1);
+  }
+}
