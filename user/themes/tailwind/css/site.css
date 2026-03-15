@@ -38,6 +38,7 @@
 .animate-children h6,
 .animate-children p,
 .animate-children .flex,
+.animate-children img,
 .animate-children a {
   opacity: 0;
   transform: translateY(25px);
@@ -51,16 +52,17 @@
 .animate-children.in-view h6 { animation: heroFade 0.8s ease forwards .2s; }
 .animate-children.in-view p { animation: heroFade 0.8s ease forwards .4s; }
 .animate-children.in-view a { animation: heroFade 0.8s ease forwards .4s; }
+.animate-children.in-view img { animation: heroFade 0.8s ease forwards .6s; }
 .animate-children.in-view .flex { animation: heroFade 0.8s ease forwards .6s; }
 
-.animate-children img {
-  opacity: 0;
-  transform: scale(1.08);
-}
+/*.animate-children img {*/
+/*  opacity: 0;*/
+/*  transform: scale(1.08);*/
+/*}*/
 
-.animate-children.in-view img {
-  animation: heroImage 6s ease forwards;
-}
+/*.animate-children.in-view img {*/
+/*  animation: heroImage 6s ease forwards;*/
+/*}*/
 
 @keyframes heroFade {
   to {

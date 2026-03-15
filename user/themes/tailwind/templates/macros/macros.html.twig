@@ -22,6 +22,9 @@
             {% if not loop.last %}
                 |
             {% endif %}
+            {% if loop.last and subtree_nr==0 %}
+                {% include 'partials/langswitcher.html.twig' %}
+            {% endif %}
         {% endif %}
     {% endfor %}
 {% endmacro %}

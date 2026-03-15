@@ -11,14 +11,15 @@ menu: Church
 slug: vineyard-church
 onpage_menu: '0'
 process:
-    markdown: true
+    markdown: false
     twig: true
 ---
 <!--hero-->
-<div class="animate-children w-screen relative left-1/2 right-1/2 -mx-[50vw] h-[90vh] mb-24" style="background: url('image-1_test2.jpg')">
+<div class="animate-children w-screen relative left-1/2 right-1/2 -mx-[50vw] h-[90vh] mb-24"
+     style="background: url('image-1_test2.jpg')">
     <div class="absolute top-[38vh] max-w-6xl mx-auto px-4 sm:px-6 lg:px-12">
         <div class="text-white p-8 rounded-2xl backdrop-blur-[2px]" style="text-shadow: 2px 2px rgba(0,0,0,0.3)">
-            <h1 class="text-white" >Vineyard in Landsberg am Lech</h1>
+            <h1 class="text-white">Vineyard in Landsberg am Lech</h1>
             <p>Jeden Sonntag um 10:00 oder über <a class="text-green-200 hover:text-green-300" href="example.com">Livestream</a>
             </p>
             <div class="flex gap-4"><a class="btn-primary-white">Besuchen</a>
@@ -26,7 +27,6 @@ process:
             </div>
         </div>
     </div>
-<!--    <img src="image-1_test2.jpg" alt="image-1" class="w-full h-auto mt-0">-->
 </div>
 <!--content-->
 <div class="animate-children flex flex-col md:flex-row gap-8 mb-12">
@@ -35,8 +35,10 @@ process:
         <h4>Eine moderne, lebendige und internationale Gemeinde</h4>
         <p>Wir glauben an den dreieinigen Gott der Bibel und erleben Ihn persönlich sowie gemeinsam als Gemeinde.
             Wir ermutigen uns gegenseitig – über alle Generationen hinweg – zur Nachfolge Jesu und geben weiter, was wir
-            von Gott empfangen haben. Als wachsende Evangelische Freikirche Vineyard möchten wir den Menschen in Landsberg dienen
-            und insbesondere diejenigen erreichen, die Jesus noch nicht kennen. Wir sind Teil des internationalen Vineyard-Verbandes.</p>
+            von Gott empfangen haben. Als wachsende Evangelische Freikirche Vineyard möchten wir den Menschen in
+            Landsberg dienen
+            und insbesondere diejenigen erreichen, die Jesus noch nicht kennen. Wir sind Teil des internationalen
+            Vineyard-Verbandes.</p>
         <a class="btn-primary">Mehr über uns</a>
     </div>
 </div>
@@ -104,6 +106,41 @@ process:
     </div>
 </div>
 
+{% include 'partials/carousel.html.twig' with { images: [
+    'gemini1.png',
+    'gemini2.png',
+    'gemini3.png'
+] }  %}
+
+<div class="flex gap-12 max-w-5xl mx-auto px-6 py-16">
+
+    <!-- Sticky left column -->
+    <div class="w-64 shrink-0 sticky top-16 self-start">
+        <h2 class="mt-4 text-4xl font-bold leading-tight tracking-tight text-stone-900">
+            Anstehende<br>Events
+        </h2>
+        <p class="mt-3 text-sm text-stone-500 leading-relaxed">
+            Alle kommenden Veranstaltungen auf einen Blick.
+        </p>
+        <a href="#" class="btn-primary">
+            Mitmachen
+        </a>
+    </div>
+    {% include 'partials/events.html.twig' with { events: [
+        {'title':'Unter der Krone','date':'16.03','type':'Predigt'},
+        {'title':'Ostern gemalt','date':'17.03','type':'Aktivität'},
+        {'title':'Ladies Brunch','date':'22.03','type':'Treffen'},
+    ] }%}
+</div>
 
 
-
+<div class="animate-children flex flex-col md:flex-row gap-8 mb-12">
+    <div class="flex-1">
+        <img src="unterderkrone.png" alt="Unter der krone"/>
+    </div>
+    <div class="flex-1">
+        <h2>Aktuelle predigtreiehe</h2>
+        <p>Finde heraus, was es heisst, unter der Herrschaft Jesu' zu leben.</p>
+        <a class="btn-primary">Zu den Aufzeichnungen</a>
+    </div>
+</div>

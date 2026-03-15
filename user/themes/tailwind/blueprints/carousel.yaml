@@ -1,0 +1,17 @@
+#---
+#title: My Carousel Page
+#carousel:
+#  autoplay: true
+#  interval: 4000
+#  show_arrows: true
+#  show_dots: true
+#  slides:
+#    - image: photo1.jpg
+#      alt: "Snowy mountain peaks"
+#      caption: "The Alps in winter"
+#    - image: photo2.jpg
+#      alt: "Sunset over the lake"
+#      link: /gallery
+#    - image: https://example.com/remote.jpg
+#      alt: "Remote image"
+#---
