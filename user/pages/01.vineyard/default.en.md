@@ -20,10 +20,10 @@ process:
     <div class="absolute top-[38vh] max-w-6xl mx-auto px-4 sm:px-6 lg:px-12">
         <div class="text-white p-8 rounded-2xl backdrop-blur-[2px]" style="text-shadow: 2px 2px rgba(0,0,0,0.3)">
             <h1 class="text-white">Vineyard in Landsberg am Lech</h1>
-            <p>Jeden Sonntag um 10:00 oder über <a class="text-green-200 hover:text-green-300" href="example.com">Livestream</a>
+            <p>Every Sunday at 10:00 or via <a class="text-green-200 hover:text-green-300" href="example.com">Livestream</a>
             </p>
-            <div class="flex gap-4"><a class="btn-primary-white">Besuchen</a>
-                <a class="btn-primary-white">Mitmachen</a>
+            <div class="flex gap-4"><a class="btn-primary-white">Visit</a>
+                <a class="btn-primary-white">Get Involved</a>
             </div>
         </div>
     </div>
@@ -31,15 +31,14 @@ process:
 <!--content-->
 <div class="animate-children flex flex-col md:flex-row gap-8 mb-12">
     <div class="flex-1">
-        <h2>Willkommen bei Vineyard Landsberg am Lech</h2>
-        <h4>Eine moderne, lebendige und internationale Gemeinde</h4>
-        <p>Wir glauben an den dreieinigen Gott der Bibel und erleben Ihn persönlich sowie gemeinsam als Gemeinde.
-            Wir ermutigen uns gegenseitig – über alle Generationen hinweg – zur Nachfolge Jesu und geben weiter, was wir
-            von Gott empfangen haben. Als wachsende Evangelische Freikirche Vineyard möchten wir den Menschen in
-            Landsberg dienen
-            und insbesondere diejenigen erreichen, die Jesus noch nicht kennen. Wir sind Teil des internationalen
-            Vineyard-Verbandes.</p>
-        <a class="btn-primary">Mehr über uns</a>
+        <h2>Welcome to Vineyard Landsberg am Lech</h2>
+        <h4>A modern, vibrant and international church community</h4>
+        <p>We believe in the triune God of the Bible and experience Him personally as well as together as a
+            congregation. We encourage one another – across all generations – to follow Jesus and pass on what we
+            have received from God. As the growing evangelical free church Vineyard, we want to serve the people of
+            Landsberg and especially reach those who do not yet know Jesus. We are part of the international
+            Vineyard Association.</p>
+        <a class="btn-primary">More About Us</a>
     </div>
 </div>
 <div>
@@ -53,7 +52,6 @@ process:
             loading="lazy">
         </iframe>
     </div>
-
 </div>
 
 <div class="flex flex-col md:flex-row gap-8 mt-12">
@@ -63,13 +61,13 @@ process:
             src="https://vineyard-landsberg.de/wp-content/uploads/2019/06/20190626-Kreuz-800x500.jpg"
             srcset="https://vineyard-landsberg.de/wp-content/uploads/2019/06/20190626-Kreuz-800x500.jpg 800w, https://vineyard-landsberg.de/wp-content/uploads/2019/06/20190626-Kreuz-800x500-300x188.jpg 300w, https://vineyard-landsberg.de/wp-content/uploads/2019/06/20190626-Kreuz-800x500-768x480.jpg 768w, https://vineyard-landsberg.de/wp-content/uploads/2019/06/20190626-Kreuz-800x500-400x250.jpg 400w"
             sizes="(max-width: 800px) 100vw, 800px"
-            alt="Kreuz"
+            alt="Cross"
         />
-        <h3 class="mt-4">Jeden Sonntagvormittag für Gott</h3>
-        <p>…das ist sehr heilsam! Denn die Sonntagvormittage mit Gott und unseren
-            Mitmenschen zu verbringen baut auf und stärkt den Geist.</p>
-        <p>Wir feiern jeden Sonntag um 10.00 Uhr Gottesdienst mit Lobpreis, Gebet und Predigt.
-            Parallel dazu finden altersgerechte Kindergottesdienste statt (Stand 04.24).</p>
+        <h3 class="mt-4">Every Sunday Morning for God</h3>
+        <p>…this is very healing! Spending Sunday mornings with God and our fellow human beings builds up
+            and strengthens the spirit.</p>
+        <p>We celebrate Sunday service every Sunday at 10:00 AM with worship, prayer and a sermon.
+            Age-appropriate children's services run in parallel (as of 04.24).</p>
     </div>
 
     <div class="flex-1">
@@ -80,11 +78,11 @@ process:
             sizes="(max-width: 800px) 100vw, 800px"
             alt="Hope"
         />
-        <h3 class="mt-4">Christ im Alltag</h3>
-        <p>Wir sind auch dazu aufgerufen, biblische Werte verantwortlich in Beruf, in der Nachbarschaft
-            und an den Brennpunkten unserer Gesellschaft einzubringen. Ob Schulwesen, Politik, Kirche,
-            Wissenschaft und Kultur, Medien oder das Rechts-, Familien- und Sozialwesen unserer Stadt:
-            all diese Bereiche brauchen unsere Gebete und unser praktisches Engagement.</p>
+        <h3 class="mt-4">A Christian in Everyday Life</h3>
+        <p>We are also called to bring biblical values responsibly into our professions, our neighborhoods,
+            and the focal points of our society. Whether education, politics, church, science and culture,
+            media, or the legal, family and social welfare systems of our city – all these areas need our
+            prayers and our practical engagement.</p>
     </div>
 
     <div class="flex-1">
@@ -93,16 +91,15 @@ process:
             src="https://vineyard-landsberg.de/wp-content/uploads/2019/06/20190626-Gebet-800x500.jpg"
             srcset="https://vineyard-landsberg.de/wp-content/uploads/2019/06/20190626-Gebet-800x500.jpg 800w, https://vineyard-landsberg.de/wp-content/uploads/2019/06/20190626-Gebet-800x500-300x188.jpg 300w, https://vineyard-landsberg.de/wp-content/uploads/2019/06/20190626-Gebet-800x500-768x480.jpg 768w, https://vineyard-landsberg.de/wp-content/uploads/2019/06/20190626-Gebet-800x500-400x250.jpg 400w"
             sizes="(max-width: 800px) 100vw, 800px"
-            alt="Gebet"
+            alt="Prayer"
         />
-        <h3 class="mt-4">Gebetstreffen</h3>
-        <p>Sorget nichts, sondern in allen Dingen lasset Eure Bitten im Gebet und Flehen mit Danksagung
-            vor Gott kund werden. Phil. 4.6.</p>
-        <p><strong>Segnendes Gebet</strong><br/>
-            nach jedem Gottesdienst bieten wir segnendes Gebet an für
-            jeden, der dieses Angebot wahrnehmen möchte.</p>
-        <p><strong>Gemeindegebet am Abend</strong><br/>
-            Jeden Dienstag um 19:30 Uhr im Gemeindehaus.</p>
+        <h3 class="mt-4">Prayer Meetings</h3>
+        <p>Be anxious for nothing, but in everything by prayer and supplication, with thanksgiving,
+            let your requests be made known to God. Phil. 4:6.</p>
+        <p><strong>Blessing Prayer</strong><br/>
+            After every service we offer blessing prayer for anyone who wishes to take up this offer.</p>
+        <p><strong>Community Prayer in the Evening</strong><br/>
+            Every Tuesday at 7:30 PM at the community center.</p>
     </div>
 </div>
 
@@ -117,30 +114,30 @@ process:
     <!-- Sticky left column -->
     <div class="w-64 shrink-0 sticky top-16 self-start">
         <h2 class="mt-4 text-4xl font-bold leading-tight tracking-tight text-stone-900">
-            Anstehende<br>Events
+            Upcoming<br>Events
         </h2>
         <p class="mt-3 text-sm text-stone-500 leading-relaxed">
-            Alle kommenden Veranstaltungen auf einen Blick.
+            All upcoming events at a glance.
         </p>
         <a href="#" class="btn-primary">
-            Mitmachen
+            Get Involved
         </a>
     </div>
     {% include 'partials/events.html.twig' with { events: [
-        {'title':'Unter der Krone','date':'16.03','type':'Predigt'},
-        {'title':'Ostern gemalt','date':'17.03','type':'Aktivität'},
-        {'title':'Ladies Brunch','date':'22.03','type':'Treffen'},
+        {'title':'Under the Crown','date':'16.03','type':'Sermon'},
+        {'title':'Easter Painted','date':'17.03','type':'Activity'},
+        {'title':'Ladies Brunch','date':'22.03','type':'Meeting'},
     ] }%}
 </div>
 
 
 <div class="animate-children flex flex-col md:flex-row gap-8 mb-12">
     <div class="flex-1">
-        <img src="unterderkrone.png" alt="Unter der krone"/>
+        <img src="unterderkrone.png" alt="Under the Crown"/>
     </div>
     <div class="flex-1">
-        <h2>Aktuelle predigtreiehe</h2>
-        <p>Finde heraus, was es heisst, unter der Herrschaft Jesu' zu leben.</p>
-        <a class="btn-primary">Zu den Aufzeichnungen</a>
+        <h2>Current Sermon Series</h2>
+        <p>Discover what it means to live under the lordship of Jesus.</p>
+        <a class="btn-primary">To the Recordings</a>
     </div>
 </div>

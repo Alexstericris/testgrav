@@ -1,0 +1,15 @@
+Redaction:
+  access:
+    site:
+      login: true
+    admin:
+      pages:
+        create: true
+        read: true
+        update: true
+        delete: false
+        list: true
+  readableName: Redaktion
+  description: 'Redaction team for texts on the website'
+  icon: write
+  enabled: true

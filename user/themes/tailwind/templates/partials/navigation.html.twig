@@ -2,5 +2,6 @@
 <nav id="mainnav" class="hidden md:flex space-x-8 items-center h-full">
     <ul class="flex items-center h-full" {{ tree ? 'class="tree"' : '' }}>
         {{ macros.nav_loop(pages) }}
+        {% include 'partials/langswitcher.html.twig'%}
     </ul>
 </nav>

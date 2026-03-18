@@ -1,17 +1,28 @@
-{% extends 'partials/langswitcher-logic.html.twig' %}
+{% set current_lang = grav.language.getActive %}
+{% set langs = page.translatedLanguages() %}
 
-{% block language_block_start %}
-<ul class="langswitcher">
-    {% endblock %}
-
-    {% block language_block_end %}
-</ul>
-{% endblock %}
-
-{% block language_item %}
-    {% if show_language %}
-        <li><a href="{{ lang_url ~ uri.params ~ (uri.query|length > 1 ? '?' ~ uri.query) }}"
-               class="external {{ active_class }}">{% include 'partials/langswitcher-' ~ display_format ~ '.html.twig' %}</a>
-        </li>
-    {% endif %}
-{% endblock %}
+{% if langs|length > 1 %}
+    <div class="inline-flex items-center">
+        <div class="inline-flex bg-black/10 rounded-full p-1 gap-0.5">
+            {% for lang, url in langs %}
+                {% if lang == current_lang %}
+                    <span
+                        aria-current="true"
+                        class="inline-block px-3 py-1 rounded-full text-xs font-semibold tracking-wider bg-white shadow-sm opacity-100 cursor-default select-none"
+                    >
+                    {{ lang|upper }}
+                </span>
+                {% else %}
+                    <a
+                        href="{{ '/'~lang~url }}"
+                        hreflang="{{ lang }}"
+                        class="inline-block px-3 py-1 rounded-full text-xs font-semibold tracking-wider opacity-40
+                        hover:opacity-75 transition-opacity duration-200"
+                    >
+                        {{ lang|upper }}
+                    </a>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+{% endif %}
