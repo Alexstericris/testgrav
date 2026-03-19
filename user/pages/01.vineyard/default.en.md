@@ -17,7 +17,7 @@ process:
 <!--hero-->
 <div class="animate-children w-screen relative left-1/2 right-1/2 -mx-[50vw] h-[90vh] mb-24"
      style="background: url('image-1_test2.jpg')">
-    <div class="absolute top-[38vh] max-w-6xl mx-auto px-4 sm:px-6 lg:px-12">
+    <div class="absolute left-1/2 -translate-x-[59%] top-[38vh] max-w-6xl w-full px-4 sm:px-6 lg:px-12">
         <div class="text-white p-8 rounded-2xl backdrop-blur-[2px]" style="text-shadow: 2px 2px rgba(0,0,0,0.3)">
             <h1 class="text-white">Vineyard in Landsberg am Lech</h1>
             <p>Every Sunday at 10:00 or via <a class="text-green-200 hover:text-green-300" href="example.com">Livestream</a>
