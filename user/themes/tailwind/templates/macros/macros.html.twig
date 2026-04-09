@@ -7,7 +7,7 @@
             ?'p-8 hover:-translate-y-0.5     transition-all duration-200 ease-in-out'
             :'relative h-full' }}">
                 <a href="{{ p.url }}"
-                   class="{{ subtree_nr==0?'px-12':'px-6' }} {{ active_page }} hover:underline h-full flex items-center">
+                   class="{{ subtree_nr==0?'px-12':'px-6' }} {{ active_page }} hover:underline h-full flex items-center text-white">
                     {{ p.menu }}
                 </a>
                 {% if p.children.visible.count > 0 %}
@@ -20,7 +20,7 @@
                 {% endif %}
             </li>
             {% if not loop.last %}
-                |
+{#                |#}
             {% endif %}
         {% endif %}
     {% endfor %}

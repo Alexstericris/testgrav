@@ -52,3 +52,4 @@ system/templates/testing/*
 /user/themes/tailwind/node_modules/
 /user/themes/tailwind/dist/
 /user/plugins/langswitcher/
+/user/plugins/error/

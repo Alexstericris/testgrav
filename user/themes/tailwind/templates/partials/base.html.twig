@@ -43,18 +43,18 @@
     {% endblock %}
 </head>
 <body id="top"
-      class="flex flex-col min-h-screen bg-white text-gray-900 {{ page.header.body_classes|e }} {{ config.theme.production ?: 'debug-screens' }}">
+      class="flex flex-col min-h-screen bg-black text-white {{ page.header.body_classes|e }} {{ config.theme.production ?: 'debug-screens' }}">
 
 {% block header %}
-    <header class="bg-white shadow-lg sticky top-0 z-50 transition-all duration-300">
+    <header class="bg-gradient-to-br from-gray-800 via-gray-900 to-black  shadow-lg sticky top-0 z-50 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <div class="flex-shrink-0 flex items-center">
-                    <a class="text-2xl font-serif font-bold tracking-tight text-gray-900 hover:text-gray-700 transition duration-150 ease-in-out uppercase"
+                    <a class="text-2xl font-serif font-bold tracking-tight text-white hover:text-gray-100 transition duration-150 ease-in-out uppercase"
                        href="{{ home_url|e }}">
                         {#                        {{ config.site.title|e }} #}
                         {% include 'partials/logo.html.twig' %}
-                        <h1 class="text-4xl bold">{{ config.site.title|e }}</h1>
+{#                        <h1 class="text-4xl bold text-white text-gray-100">{{ config.site.title|e }}</h1>#}
                     </a>
                 </div>
                 {% block header_navigation %}
@@ -69,7 +69,7 @@
     <main class="flex-grow">
         {% block hero %}{% endblock %}
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="prose prose-lg prose-gray max-w-none mx-auto">
+            <div class="prose prose-lg prose-invert max-w-none mx-auto">
                 {% block content %}{% endblock %}
             </div>
         </div>

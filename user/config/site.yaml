@@ -1,4 +1,4 @@
-title: Vineyard
+title: 'Alecris Services'
 default_lang: en
 author:
   name: Alex
@@ -7,7 +7,7 @@ taxonomies:
   - category
   - tag
 metadata:
-  description: 'Vineyard in Landsberg am Lech'
+  description: 'Alecris Services offers you custom solutions for websites, web applications and more.'
 summary:
   enabled: true
   format: short
