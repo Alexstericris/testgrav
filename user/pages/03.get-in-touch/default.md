@@ -1,5 +1,5 @@
 ---
-title: Upcoming Events
+title: 'Upcoming Events'
 ---
 
 <div class="capsule mb-12 text-center">

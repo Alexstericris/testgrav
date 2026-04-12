@@ -6,15 +6,8 @@
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2
-    px-6 py-3
-    border border-white/10 text-white font-semibold text-sm
-    bg-zinc-900
-    rounded-2xl no-underline cursor-pointer
-    transition-all duration-200 ease-in-out
-    hover:bg-[#499783]  hover:border-white/20
-    focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:ring-offset-2 focus:ring-offset-zinc-950
-    disabled:opacity-40 disabled:pointer-events-none;
+    @apply
+    bg-primary text-on-primary px-8 py-4 rounded-lg font-bold hover:opacity-90 transition-all flex items-center gap-2
   }
 
 

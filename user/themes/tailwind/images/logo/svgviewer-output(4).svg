@@ -1,0 +1,1 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="100" viewBox="0 0 250 100"><style> .letter { font-family: "Alteix Sans", Arial, sans-serif; font-size: 60px; font-weight: 700; } .invert { mix-blend-mode: difference; fill: white; } </style><text x="120" y="80" class="letter" fill="#4ECCA3" opacity="1">cris</text><text x="30" y="80" class="letter invert">Ale</text></svg>

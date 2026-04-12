@@ -8,48 +8,52 @@ content:
         by: folder
         dir: asc
 menu: Services
-slug: home
 onpage_menu: '0'
 process:
-    markdown: false
     twig: true
+    markdown: false
 ---
 
-<!-- GLOBAL WRAPPER (optional if not already dark) -->
-<div class="bg-gray-950 text-gray-200">
+<div class="text-gray-200">
 
     <!-- HERO -->
-    <div class="animate-children w-screen relative left-1/2 right-1/2 -mx-[50vw] h-[90vh] mb-28
-            bg-gradient-to-br from-gray-900 via-gray-950 to-black">
+    <div class="animate-children w-screen relative left-1/2 right-1/2 -mx-[50vw] h-[80vh] mb-28">
 
         <div class="absolute inset-0 opacity-30"
              style=""></div>
 
-        <div class="absolute left-1/2 -translate-x-1/2 top-[35vh] max-w-5xl w-full px-6">
-            <div class="p-10 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl shadow-2xl">
-                <div class="grid grid-cols-2">
-                    <div>
-                    <h1 class="text-4xl md:text-6xl font-bold mb-4 text-white">
-                        Alex Cristea
-                    </h1>
-                    <p class="text-lg text-gray-300 mb-6">
-                        Full Stack Developer crafting scalable Laravel & Vue applications.<br>
-                        I also build websites via Wordpress or Grav CMS.<br>
-                        5+ years of Experience with Laravel & Vue
-                    </p>
-                    </div>
-                    <img src="unterderkrone.png" alt="Alex Cristea">
-                </div>
-                <div class="flex gap-4">
-                    <a href="/projects"
-                       class="px-6 py-3 rounded-xl bg-white text-black font-medium hover:bg-gray-200 transition">
-                        View Services
-                    </a>
+        <div class="absolute left-1/2 -translate-x-1/2 top-[15vh] max-w-4xl w-full px-6">
+            <div class="p-10 rounded-3xl border border-white/10 backdrop-blur-xl shadow-2xl
+             bg-gradient-to-br from-gray-800 via-gray-900 to-black">
+                <div class="flex flex-col md:flex-row items-center gap-6">
 
-                    <a href="/contact"
-                       class="px-6 py-3 rounded-xl border border-white/20 hover:border-white/40 hover:bg-white/10 transition">
-                        Contact Me
-                    </a>
+                    <!-- Text -->
+                    <div class="flex-1">
+                        <h1 class="text-4xl md:text-6xl font-bold mb-4 text-white">
+                            Alex Cristea
+                        </h1>
+                        <p class="text-lg text-gray-300 mb-6">
+                            Full Stack Developer crafting scalable Laravel & Vue applications.<br>
+                            I also build websites via Wordpress or Grav CMS.<br>
+                            5+ years of Experience with Laravel & Vue
+                        </p>
+                        <div class="flex gap-4">
+                            <a href="../../../index.php"
+                               class="btn-primary">
+                                View Services
+                            </a>
+
+                            <a href="../../../index.php"
+                               class="px-6 py-3 rounded-xl border border-white/20 hover:border-white/40 hover:bg-white/10 transition">
+                                Contact Me
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Image -->
+                    <img class="max-h-[280px] w-auto m-0 rounded-xl"
+                         src="{{ page.media['img_4670.jpg'].url|e }}"
+                         alt="Alex Cristea">
                 </div>
             </div>
         </div>
@@ -66,7 +70,7 @@ process:
                 I enjoy building clean, performant and maintainable applications.
             </p>
 
-            <a href="/about"
+            <a href="../../../index.php"
                class="inline-block mt-4 px-5 py-3 rounded-xl bg-indigo-500 hover:bg-indigo-400 text-white transition">
                 More About Me
             </a>
@@ -101,7 +105,7 @@ process:
             <div class="group">
                 <div class="overflow-hidden rounded-2xl mb-4">
                     <img class="w-full group-hover:scale-105 transition duration-500"
-                         src="project1.jpg"/>
+                         src="../../../index.php"/>
                 </div>
                 <h3 class="text-white text-xl">Web Applications</h3>
                 <p class="text-gray-400">Laravel apps with APIs and auth systems.</p>
@@ -110,7 +114,7 @@ process:
             <div class="group">
                 <div class="overflow-hidden rounded-2xl mb-4">
                     <img class="w-full group-hover:scale-105 transition duration-500"
-                         src="project2.jpg"/>
+                         src="../../../index.php"/>
                 </div>
                 <h3 class="text-white text-xl">Chrome Extensions</h3>
                 <p class="text-gray-400">Custom browser tools with storage & UI.</p>
@@ -119,7 +123,7 @@ process:
             <div class="group">
                 <div class="overflow-hidden rounded-2xl mb-4">
                     <img class="w-full group-hover:scale-105 transition duration-500"
-                         src="project3.jpg"/>
+                         src="../../../index.php"/>
                 </div>
                 <h3 class="text-white text-xl">Backend Systems</h3>
                 <p class="text-gray-400">APIs, auth & scalable architectures.</p>
@@ -152,7 +156,7 @@ process:
         <h2 class="text-4xl text-white mb-4">Let’s Build Something</h2>
         <p class="text-gray-300 mb-6">Open for projects and collaborations</p>
 
-        <a href="/contact"
+        <a href="../../../index.php"
            class="px-8 py-4 rounded-xl bg-indigo-500 hover:bg-indigo-400 text-white text-lg transition shadow-lg">
             Get In Touch
         </a>

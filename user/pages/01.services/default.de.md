@@ -21,7 +21,7 @@ process:
     <div class="absolute left-1/2 -translate-x-[59%] top-[38vh] max-w-6xl w-full px-4 sm:px-6 lg:px-12">
         <div class="text-white p-8 rounded-2xl backdrop-blur-[2px]" style="text-shadow: 2px 2px rgba(0,0,0,0.3)">
             <h1 class="text-white">Vineyard in Landsberg am Lech</h1>
-            <p>Jeden Sonntag um 10:00 Uhr oder per <a class="text-green-200 hover:text-green-300" href="example.com">Livestream</a>
+            <p>Jeden Sonntag um 10:00 Uhr oder per <a class="text-green-200 hover:text-green-300" href="../../../index.php">Livestream</a>
             </p>
             <div class="flex gap-4"><a class="btn-primary-white">Besuchen</a>
                 <a class="btn-primary-white">Mitmachen</a>
@@ -135,7 +135,7 @@ process:
 
 <div class="animate-children flex flex-col md:flex-row gap-8 mb-12">
     <div class="flex-1">
-        <img src="unterderkrone.png" alt="Unter der Krone"/>
+        <img src="../../../index.php" alt="Unter der Krone"/>
     </div>
     <div class="flex-1">
         <h2>Aktuelle Predigtreihe</h2>
