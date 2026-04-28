@@ -1,0 +1,63 @@
+{# partials/carousel.html.twig #}
+
+{% set carousel_id = 'carousel-' ~ random(10000) %}
+{% set speed = speed ?? 25 %} {# seconds for full loop #}
+
+<div id="{{ carousel_id }}" class="carousel">
+
+    <div class="carousel__track">
+
+        {# Duplicate images for seamless loop #}
+        {% for image in images %}
+            <div class="carousel__slide">
+                <img src="{{ page.media[image].url }}" alt="">
+            </div>
+        {% endfor %}
+
+        {% for image in images %}
+            <div class="carousel__slide">
+                <img src="{{ page.media[image].url }}" alt="">
+            </div>
+        {% endfor %}
+
+    </div>
+
+</div>
+
+<style>
+
+    #{{ carousel_id }} {
+        overflow: hidden;
+        width: 100%;
+    }
+
+    #{{ carousel_id }} .carousel__track {
+        display: flex;
+        width: max-content;
+        animation: scroll-{{ carousel_id }} {{ speed }}s linear infinite;
+    }
+
+    #{{ carousel_id }} .carousel__slide {
+                           flex: 0 0 auto;
+                           width: 400px; /* fixed slide width */
+                           margin-right: 1rem;
+                       }
+
+    #{{ carousel_id }} .carousel__slide img {
+                           width: 100%;
+                           height: 300px;
+                           object-fit: cover;   /* ensures equal crop */
+                           border-radius: 6px;
+                       }
+
+    /* infinite scroll animation */
+    @keyframes scroll-{{ carousel_id }} {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+</style>

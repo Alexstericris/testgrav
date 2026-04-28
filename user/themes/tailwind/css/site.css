@@ -1,25 +1,95 @@
 /*@import 'yourcssfile.css';*/
+@import "tailwindcss";
+/* Content sources (replaces `content` array in config) */
+@source "../../config/**/*.yaml";
+@source "../../pages/**/*.md";
+@source "../../../**/*.md";
+@source "./blueprints/**/*.yaml";
+@source "./js/**/*.js";
+@source "./templates/**/*.twig";
+@source "./tailwind.yaml";
+@source "./tailwind.php";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Dark mode (replaces darkMode: 'class') */
+@variant dark (&:where(.dark, .dark *));
+
+/* Plugins */
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/typography";
+@plugin "tailwindcss-debug-screens";
+
+/* Custom colors (replaces theme.extend.colors) */
+@theme {
+  --color-on-primary-container: #29b089;
+  --color-inverse-on-surface: #2f2e43;
+  --color-on-background: #e2e0fc;
+  --color-on-primary: #003829;
+  --color-surface-container-lowest: #0c0c1f;
+  --color-surface-dim: #111125;
+  --color-surface-container-low: #1a1a2e;
+  --color-secondary-container: #294a77;
+  --color-secondary-fixed-dim: #a9c8fc;
+  --color-tertiary: #ffb782;
+  --color-on-primary-fixed: #002116;
+  --color-on-secondary: #09305c;
+  --color-on-secondary-fixed-variant: #274774;
+  --color-on-secondary-container: #9bbaee;
+  --color-secondary: #a9c8fc;
+  --color-surface-container: #1e1e32;
+  --color-surface-variant: #333348;
+  --color-surface-bright: #37374d;
+  --color-outline-variant: #43474f;
+  --color-on-tertiary-fixed-variant: #6b3a10;
+  --color-on-error: #690005;
+  --color-on-tertiary: #4f2500;
+  --color-primary-container: #003c2c;
+  --color-on-surface-variant: #c3c6d0;
+  --color-primary-fixed: #7ef9cd;
+  --color-on-tertiary-fixed: #301400;
+  --color-inverse-primary: #006c51;
+  --color-surface-tint: #60dcb2;
+  --color-tertiary-fixed-dim: #ffb782;
+  --color-inverse-surface: #e2e0fc;
+  --color-surface-container-highest: #333348;
+  --color-surface-container-high: #28283d;
+  --color-secondary-fixed: #d5e3ff;
+  --color-tertiary-container: #542800;
+  --color-tertiary-fixed: #ffdcc5;
+  --color-error-container: #93000a;
+  --color-primary-fixed-dim: #60dcb2;
+  --color-on-surface: #e2e0fc;
+  --color-error: #ffb4ab;
+  --color-on-tertiary-container: #cf8e5c;
+  --color-surface: #111125;
+  --color-outline: #8d919a;
+  --color-on-error-container: #ffdad6;
+  --color-primary: #60dcb2;
+  --color-on-secondary-fixed: #001b3c;
+  --color-background: #111125;
+  --color-on-primary-fixed-variant: #00513c;
+}
+.material-symbols-outlined
+{
+  font-size: revert-layer;
+}
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--color-on-primary-container);
+  }
+}
+
+
+@layer utilities {
+}
 
 @layer components {
   .btn-primary {
-    @apply
-    bg-primary text-on-primary px-8 py-4 rounded-lg font-bold hover:opacity-90 transition-all flex items-center gap-2
+    @apply bg-primary text-on-primary px-8 py-4 rounded-lg font-bold hover:brightness-90 transition-all flex items-center gap-2
   }
 
 
-  .btn-primary-white {
-    @apply inline-flex items-center justify-center gap-2
-    px-6 py-3
-    border text-white font-semibold text-sm
-    rounded-2xl no-underline cursor-pointer
-    transition-all duration-200 ease-in-out
-    hover:text-green-200 hover:border-green-200 hover:-translate-y-0.5
-    focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2
-    disabled:opacity-50 disabled:pointer-events-none;
+  .btn-primary-transparent {
+    @apply px-8 py-4 rounded-lg font-bold text-primary border border-primary/20 hover:bg-primary/10 transition-all;
   }
 }
 /* Your existing styles, slightly updated */

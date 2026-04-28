@@ -22,6 +22,7 @@
     {% block stylesheets %}
         {% do assets.addCss('theme://dist/css/site.css', 98) %}
     {% endblock %}
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
     {% block javascripts %}
         {% do assets.addJs('theme://js/main' ~ extension ~ '.js', 98) %}
@@ -30,16 +31,6 @@
     {% block assets deferred %}
     {{ assets.css()|raw }}
     {{ assets.js()|raw }}
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: Proxima Nova, Arial, sans-serif;
-            color: rgb(54, 54, 58)
-        }
-    </style>
     {% endblock %}
 </head>
 <body id="top"
@@ -69,7 +60,7 @@
     <main class="flex-grow ">
         {% block hero %}{% endblock %}
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="prose prose-lg prose-invert max-w-none mx-auto">
+            <div class="max-w-none mx-auto">
                 {% block content %}{% endblock %}
             </div>
         </div>
