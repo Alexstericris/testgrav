@@ -25,7 +25,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
     {% block javascripts %}
-        {% do assets.addJs(config.theme.production?'theme://js/main.js':'theme://dist/js/main.js', 98) %}
+        {% do assets.addJs((config.theme.production ? 'theme://dist/js/main.min.js':'theme://js/main.js'), 98) %}
     {% endblock %}
 
     {% block assets deferred %}
