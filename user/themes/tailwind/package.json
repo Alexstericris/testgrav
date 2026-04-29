@@ -7,6 +7,8 @@
   "main": "index.js",
   "scripts": {
     "css": "@tailwindcss/cli -i ./css/site.css -o ./dist/css/site.css --watch",
+    "js": "watch -n 2 cross-env NODE_ENV=development terser ./js/main.js -o ./dist/js/main.min.js -c -m",
+    "build-js": "cross-env NODE_ENV=development terser ./js/main.js -o ./dist/js/main.min.js -c -m",
     "build": "cross-env NODE_ENV=development tailwindcss -i ./css/site.css -o ./dist/css/site.css --postcss",
     "watch": "cross-env NODE_ENV=development tailwindcss -i ./css/site.css -o ./dist/css/site.css --postcss --watch",
     "prod": "cross-env NODE_ENV=production tailwindcss -i ./css/site.css -o ./dist/css/site.css --postcss"
@@ -24,6 +26,7 @@
     "postcss": "^8.4.21",
     "postcss-import": "^15.1.0",
     "tailwindcss": "^4.2.2",
-    "tailwindcss-debug-screens": "^3.0.1"
+    "tailwindcss-debug-screens": "^3.0.1",
+    "terser": "^5.46.2"
   }
 }
