@@ -68,10 +68,10 @@
   --color-background: #111125;
   --color-on-primary-fixed-variant: #00513c;
 }
-.material-symbols-outlined
-{
+.material-symbols-outlined {
   font-size: revert-layer;
 }
+
 @layer base {
   h1, h2, h3, h4, h5, h6 {
     color: var(--color-on-primary-container);
@@ -87,14 +87,15 @@
     @apply bg-primary text-on-primary px-8 py-4 rounded-lg font-bold hover:brightness-90 transition-all flex items-center gap-2
   }
 
-  .active {
-    @apply text-primary bg-surface-container-high font-semibold;
+  #mobile-nav .active {
+    @apply text-primary    font-semibold;
   }
 
   .btn-primary-transparent {
     @apply px-8 py-4 rounded-lg font-bold text-primary border border-primary/20 hover:bg-primary/10 transition-all;
   }
 }
+
 /* Your existing styles, slightly updated */
 .animate-children h1,
 .animate-children h2,
@@ -110,16 +111,45 @@
   transform: translateY(25px);
 }
 
-.animate-children.in-view h1 { animation: heroFade 0.8s ease forwards .2s; }
-.animate-children.in-view h2 { animation: heroFade 0.8s ease forwards .2s; }
-.animate-children.in-view h3 { animation: heroFade 0.8s ease forwards .2s; }
-.animate-children.in-view h4 { animation: heroFade 0.8s ease forwards .2s; }
-.animate-children.in-view h5 { animation: heroFade 0.8s ease forwards .2s; }
-.animate-children.in-view h6 { animation: heroFade 0.8s ease forwards .2s; }
-.animate-children.in-view p { animation: heroFade 0.8s ease forwards .4s; }
-.animate-children.in-view a { animation: heroFade 0.8s ease forwards .4s; }
-.animate-children.in-view img { animation: heroFade 0.8s ease forwards .6s; }
-.animate-children.in-view .flex { animation: heroFade 0.8s ease forwards .6s; }
+.animate-children.in-view h1 {
+  animation: heroFade 0.8s ease forwards .2s;
+}
+
+.animate-children.in-view h2 {
+  animation: heroFade 0.8s ease forwards .2s;
+}
+
+.animate-children.in-view h3 {
+  animation: heroFade 0.8s ease forwards .2s;
+}
+
+.animate-children.in-view h4 {
+  animation: heroFade 0.8s ease forwards .2s;
+}
+
+.animate-children.in-view h5 {
+  animation: heroFade 0.8s ease forwards .2s;
+}
+
+.animate-children.in-view h6 {
+  animation: heroFade 0.8s ease forwards .2s;
+}
+
+.animate-children.in-view p {
+  animation: heroFade 0.8s ease forwards .4s;
+}
+
+.animate-children.in-view a {
+  animation: heroFade 0.8s ease forwards .4s;
+}
+
+.animate-children.in-view img {
+  animation: heroFade 0.8s ease forwards .6s;
+}
+
+.animate-children.in-view .flex {
+  animation: heroFade 0.8s ease forwards .6s;
+}
 
 /*.animate-children img {*/
 /*  opacity: 0;*/
