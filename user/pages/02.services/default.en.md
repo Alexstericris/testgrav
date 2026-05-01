@@ -9,7 +9,7 @@ process:
 
     <!-- HERO -->
     <section class="relative min-h-[80vh] flex items-center mb-28 overflow-hidden">
-        <div class="absolute inset-0 bg-primary/5 blur-[120px] opacity-30"></div>
+        <div class="bg-primary/5 blur-[120px] opacity-30"></div>
 
         <div class="max-w-7xl mx-auto w-full px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>

@@ -1,0 +1,32 @@
+{% macro nav_loop(page,subtree_nr) %}
+    {% import _self as macros %}
+    {% for p in page.children.visible %}
+        {% set active_page = (p.active or p.activeChild) ? 'active' : '' %}
+        {% if subtree_nr <2 %}
+            <li class="{{ subtree_nr>0
+            ?'p-8 hover:-translate-y-0.5     transition-all duration-200 ease-in-out'
+            :'relative h-full' }}">
+                <a href="{{ p.url }}"
+                   class="px-12 py-6 {{ active_page }}
+          h-full flex items-center
+          text-on-surface
+          hover:text-primary
+          hover:bg-surface-container-high
+          transition-all duration-200 rounded-lg">
+                    {{ p.menu }}
+                </a>
+                {% if p.children.visible.count > 0 %}
+                    <ul class="hidden flex-col bg-white shadow-md rounded-xl
+                        {#                    border border-solid border-black #}
+                        shadow-md
+                        rounded-b-xl left-1/2 -translate-x-1/2">
+                        {{ macros.nav_loop(p,subtree_nr+1) }}
+                    </ul>
+                {% endif %}
+            </li>
+            {% if not loop.last %}
+                {#                | #}
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+{% endmacro %}

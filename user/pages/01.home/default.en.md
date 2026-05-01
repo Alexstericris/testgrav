@@ -17,12 +17,12 @@ process:
 <div class="text-gray-200">
 
     <!-- HERO -->
-    <div class="animate-children w-screen relative left-1/2 right-1/2 -mx-[50vw] h-[60vh] mb-28">
+    <div class="animate-children mt-12 lg:mt-28 mb-28">
 
-        <div class="absolute inset-0 opacity-30"
+        <div class="opacity-30"
              style=""></div>
 
-        <div class="absolute left-1/2 -translate-x-1/2 top-[15vh] max-w-4xl w-full px-6">
+        <div class="max-w-7xl w-full px-6">
             <div class="p-10 rounded-3xl border border-white/10 backdrop-blur-xl shadow-2xl
              bg-gradient-to-br from-gray-800 via-gray-900 to-black">
                 <div class="flex flex-col md:flex-row items-center gap-6">

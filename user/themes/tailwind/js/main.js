@@ -7,6 +7,7 @@
  Vanilla JS conversion
 */
 
+
 function treemenu(element, options) {
   options = options || {};
   options.delay = options.delay || 0;
@@ -125,6 +126,14 @@ document.addEventListener("DOMContentLoaded", () => {
     closeOther: false,
   });
   document.querySelectorAll(".animate-children").forEach((el) => observer.observe(el));
+  const toggle = document.getElementById('mobile-nav-toggle');
+  const mobileNav = document.getElementById('mobile-nav');
+
+  toggle.addEventListener('click', () => {
+    toggle.classList.toggle('open');
+    toggle.classList.toggle('z-20');
+    mobileNav.classList.toggle('hidden');
+  });
 
 });
 
