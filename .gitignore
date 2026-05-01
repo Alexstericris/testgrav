@@ -24,7 +24,8 @@ user/data/*
 #user/themes/*
 #!user/themes/.*
 user/**/config/security.yaml
-
+user/config/system.yaml
+user/config/themes/*
 # Environments
 .env
 .gravenv
