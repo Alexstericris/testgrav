@@ -6,7 +6,14 @@ use Grav\Common\Theme;
 
 class Tailwind extends Theme
 {
-    // Access plugin events in this class
+
+    public static function getSubscribedEvents()
+    {
+        return [
+            'onTwigLoader'          => ['onTwigLoader', 0],
+        ];
+    }
+
     public function onTwigLoader()
     {
         $theme_paths = Grav::instance()['locator']->findResources('theme://images');
@@ -14,4 +21,5 @@ class Tailwind extends Theme
             $this->grav['twig']->addPath($images_path, 'images');
         }
     }
+
 }
