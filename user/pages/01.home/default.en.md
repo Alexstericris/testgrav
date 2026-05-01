@@ -22,7 +22,7 @@ process:
         <div class="opacity-30"
              style=""></div>
 
-        <div class="max-w-7xl w-full px-6">
+        <div class="max-w-7xl w-full">
             <div class="p-10 rounded-3xl border border-white/10 backdrop-blur-xl shadow-2xl
              bg-gradient-to-br from-gray-800 via-gray-900 to-black">
                 <div class="flex flex-col md:flex-row items-center gap-6">
