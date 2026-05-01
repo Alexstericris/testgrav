@@ -3,9 +3,7 @@
     {% for p in page.children.visible %}
         {% set active_page = (p.active or p.activeChild) ? 'active' : '' %}
         {% if subtree_nr <2 %}
-            <li class="{{ subtree_nr>0
-            ?'p-8 hover:-translate-y-0.5     transition-all duration-200 ease-in-out'
-            :'relative h-full' }}">
+            <li class="p-8 transition-all duration-200 ease-in-out">
                 <a href="{{ p.url }}"
                    class="px-12 py-6 {{ active_page }}
           h-full flex items-center
