@@ -73,6 +73,28 @@ function treemenu(element, options) {
   return element;
 }
 
+function treemenuMobile(element) {
+  const listItems = element.querySelectorAll("li");
+  listItems.forEach(function (li) {
+    const subtree = li.querySelector(":scope > ul");
+    const button = li.querySelector("button");
+    console.log(li,button)
+    if (button) {
+      const icon = button.querySelector("span");
+      button.addEventListener('click', (elem) => {
+        if (icon.textContent.trim() === 'chevron_right') {
+          icon.textContent = 'expand_more'; // down chevron
+        } else {
+          icon.textContent = 'chevron_right';
+        }
+        subtree.classList.toggle('hidden')
+      })
+    }
+
+  });
+  return element;
+}
+
 // Slide helpers using Tailwind-compatible approach
 function slideDown(el, duration) {
   duration = duration || 300;
@@ -106,6 +128,7 @@ function slideUp(el, duration) {
     el.style.transition = "";
   }, duration);
 }
+
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach(entry => {
@@ -116,7 +139,7 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.1 } // trigger when 10% visible
+  {threshold: 0.1} // trigger when 10% visible
 );
 
 
@@ -128,7 +151,10 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".animate-children").forEach((el) => observer.observe(el));
   const toggle = document.getElementById('mobile-nav-toggle');
   const mobileNav = document.getElementById('mobile-nav');
-
+  treemenuMobile(mobileNav, {
+    delay: 440,
+    closeOther: false,
+  });
   toggle.addEventListener('click', () => {
     toggle.classList.toggle('open');
     toggle.classList.toggle('z-20');

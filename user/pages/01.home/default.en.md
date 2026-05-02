@@ -151,11 +151,12 @@ process:
                         I am passionate about building complex systems and working with modern technologies.
                     </p>
                     <div class="flex justify-center w-full">
-                        {% include 'partials/carousel.html.twig' with { images: [
-                            'delo_logo_lightblue.svg',
-                            'solit-logo-signatur.png',
-                            'Schubwerk-Logo-Black-768x146.png.webp'
-                        ] } %}
+                        {% include 'partials/carousel.html.twig' with {
+                            images: [
+                                'delo_logo_lightblue.svg',
+                                'solit-logo-signatur.png',
+                                'Schubwerk-Logo-Black-768x146.png.webp'
+                            ] } %}
                     </div>
 {#                    <div>#}
 {#                        <img class="max-h-[280px] w-auto m-0 rounded-xl"#}

@@ -11,7 +11,7 @@
                     {{ p.menu }}
                 </a>
                 {% if p.children.visible.count > 0 %}
-                    <ul class="hidden absolute top-full flex justify-between bg-white items-center h-full
+                    <ul class="hidden absolute top-full flex justify-between bg-gradient-end items-center h-full text-nowrap
 {#                    border border-solid border-black #}
                     shadow-md
                      rounded-b-xl left-1/2 -translate-x-1/2">
@@ -19,8 +19,8 @@
                     </ul>
                 {% endif %}
             </li>
-            {% if not loop.last %}
-{#                |#}
+            {% if not loop.last and subtree_nr>0 %}
+                <span class="text-white">|</span>
             {% endif %}
         {% endif %}
     {% endfor %}

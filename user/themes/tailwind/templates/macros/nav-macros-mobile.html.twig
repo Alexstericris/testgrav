@@ -3,26 +3,38 @@
     {% for p in page.children.visible %}
         {% set active_page = (p.active or p.activeChild) ? 'active' : '' %}
         {% if subtree_nr <2 %}
-            <li class="transition-all duration-200 ease-in-out text-white">
-                <a href="{{ p.url }}"
-                   class="px-12 py-6 {{ active_page }}
-          h-full flex items-center
-          group
-        hover:bg-surface-container-high
-          transition-all duration-200 rounded-lg">
-                <span class="material-symbols-outlined no-underline">
-                    chevron_right
-                </span>
-                <span class="group-hover:underline">
-                    {{ p.menu }}
-                </span>
-                </a>
+            <li class="transition-all duration-200 ease-in-out text-white flex flex-col">
+                <div class="flex">
+                    <a href="{{ p.url }}"
+                       class="px-12 py-6 {{ active_page }}
+                          h-full flex items-center
+                          w-full
+                          group
+                        hover:bg-surface-container-high
+                          transition-all duration-200 rounded-lg">
+                    <span class="material-symbols-outlined no-underline">
+                        chevron_right
+                    </span>
+                        <span class="group-hover:underline">
+                        {{ p.menu }}
+                    </span>
+                    </a>
+                    {% if p.children.visible.count > 0 %}
+                        <button class="w-[20%] rounded-lg hover:bg-surface-container-high text-center">
+                        <span class="material-symbols-outlined no-underline
+                            text-3xl transition-transform duration-300">
+                            chevron_right
+                        </span>
+                        </button>
+                    {% endif %}
+                </div>
                 {% if p.children.visible.count > 0 %}
-                    <ul class="hidden flex-col bg-white shadow-md rounded-xl
+                    <ul class="hidden flex flex-col w-full bg-surface-container
+                            border-t border-b border-primary shadow-[0_0_10px_rgba(34,197,94,0.8)]">
                         {#                    border border-solid border-black #}
-                        shadow-md
-                        rounded-b-xl left-1/2 -translate-x-1/2">
-                        {{ macros.nav_loop(p,subtree_nr+1) }}
+                        <div class="ml-8">
+                            {{ macros.nav_loop(p,subtree_nr+1) }}
+                        </div>
                     </ul>
                 {% endif %}
             </li>

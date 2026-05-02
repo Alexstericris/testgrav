@@ -36,6 +36,9 @@
   --color-on-secondary-container: #9bbaee;
   --color-secondary: #a9c8fc;
   --color-surface-container: #1e1e32;
+  --color-gradient-start: #101828;
+  --color-gradient-to: #1e2939;
+  --color-gradient-end: #000000;
   --color-surface-variant: #333348;
   --color-surface-bright: #37374d;
   --color-outline-variant: #43474f;

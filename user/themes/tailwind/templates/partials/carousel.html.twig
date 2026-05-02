@@ -3,7 +3,7 @@
 {% set speed = speed ?? 25 %}
 {% set item_height = item_height ?? 80 %}
 {% set item_gap = item_gap ?? 64 %}
-{% set wrapper_class = wrapper_class ?? 'w-1/2' %}
+{% set wrapper_class = wrapper_class ?? 'w-full md:w-1/2 ' %}
 
 <div id="{{ carousel_id }}" class="carousel overflow-hidden {{ wrapper_class }}">
     <div class="carousel__track flex w-max"
