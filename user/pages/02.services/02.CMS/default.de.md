@@ -3,7 +3,7 @@ title: "CMS"
 process:
     twig: true
     markdown: false
-visible: true
+visible: false
 ---
 
 ## Das ist mein content

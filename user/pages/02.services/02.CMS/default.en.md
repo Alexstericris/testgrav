@@ -3,7 +3,7 @@ title: CMS
 process:
     markdown: true
     twig: true
-visible: true
+visible: false
 ---
 
 <div class="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-3 gap-8">
